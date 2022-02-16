@@ -1,0 +1,18 @@
+{
+  "name": "cases",
+  "version": "1.0.0",
+  "description": "",
+  "dependencies": {
+    "ethereumjs-util": "7.1.0",
+    "is-array": "1.0.1",
+    "lowdb": "3.0.0",
+    "mime": "3.0.0",
+    "polycrc": "1.1.0",
+    "prop-types": "15.8.1",
+    "punycode": "2.1.1",
+    "uuid": "8.3.2"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

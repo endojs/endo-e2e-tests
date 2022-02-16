@@ -1,0 +1,42 @@
+{
+  "name": "endo-e2e-tests",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "install-cases": "cd test && npm i --ignore-scripts",
+    "test": "ava",
+    "prettier": "prettier --write './**/*'",
+    "generate-cases": "node test-imports/generate-cases.cjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "ava": "^4.0.1",
+    "prettier": "^1.19.1"
+  },
+  "dependencies": {
+    "@endo/compartment-mapper": "^0.6.5",
+    "ses": "^0.15.7"
+  },
+  "prettier": {
+    "trailingComma": "all",
+    "singleQuote": true,
+    "overrides": [
+      {
+        "files": "*.cjs",
+        "options": {
+          "parser": "babel"
+        }
+      }
+    ]
+  },
+  "ava": {
+    "files": [
+      "test-*/index.mjs"
+    ],
+    "timeout": "2m"
+  }
+}
