@@ -56,7 +56,7 @@ A test case must export `expected` and `actual` - these two will be passed to Av
 
 # Import behavior matrix
 
-Go to [Import behavior matrix table](./test-matrix/table.md)
+See [Import behavior matrix table](./test-matrix/table.md)
 ## Generating
 
 Go to test-matrix and run

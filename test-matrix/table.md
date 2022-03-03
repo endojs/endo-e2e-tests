@@ -1,9 +1,11 @@
 # Import behavior matrix
-| | 1:<br>default | 1:<br>no | 1:<br>even | 1:<br>default<br>.even |  2:<br>default | 2:<br>no | 2:<br>even | 2:<br>default<br>.even |  3:<br>default | 3:<br>no | 3:<br>even | 3:<br>default<br>.even |  4:<br>default | 4:<br>no | 4:<br>even | 4:<br>default<br>.even |  5:<br>default | 5:<br>no | 5:<br>even | 5:<br>default<br>.even
+What is available as a result of `import * as namespace from "x.cjs"`
+| | 1.cjs:<br>default | 1.cjs:<br>no | 1.cjs:<br>even | 1.cjs:<br>default<br>.even |  2.cjs:<br>default | 2.cjs:<br>no | 2.cjs:<br>even | 2.cjs:<br>default<br>.even |  3.cjs:<br>default | 3.cjs:<br>no | 3.cjs:<br>even | 3.cjs:<br>default<br>.even |  4.cjs:<br>default | 4.cjs:<br>no | 4.cjs:<br>even | 4.cjs:<br>default<br>.even |  5.cjs:<br>default | 5.cjs:<br>no | 5.cjs:<br>even | 5.cjs:<br>default<br>.even
 | --- | --- | --- | --- | --- |  --- | --- | --- | --- |  --- | --- | --- | --- |  --- | --- | --- | --- |  --- | --- | --- | ---
 | node | ✔️ | ✔️ | ✔️ | ✔️ |   ✔️ | ✔️ | ❌ | ✔️ |   ✔️ | ✔️ | ❌ | ✔️ |   ✔️ | ✔️ | ✔️ | ✔️ |   ✔️ | ❌ | ❌ | ✔️
 | endo | ✔️ | ✔️ | ✔️ | ✔️ |   ✔️ | ✔️ | ❌ | ✔️ |   ✔️ | ✔️ | ❌ | ✔️ |   ✔️ | ✔️ | ✔️ | ✔️ |   ✔️ | ❌ | ❌ | ✔️
 | webpack | ✔️ | ❌ | ✔️ | ✔️ |   ✔️ | ❌ | ✔️ | ✔️ |   ✔️ | ❌ | ✔️ | ✔️ |   ✔️ | ❌ | ✔️ | ✔️ |   ✔️ | ❌ | ✔️ | ✔️
+| rollup | ✔️ | ❌ | ✔️ | ✔️ |   ✔️ | ❌ | ✔️ | ✔️ |   ✔️ | ❌ | ✔️ | ✔️ |   ✔️ | ❌ | ✔️ | ✔️ |   ✔️ | ❌ | ✔️ | ✔️
 | parcel | ❌ | ❌ | ✔️ | ❌ |   ❌ | ❌ | ✔️ | ❌ |   ❌ | ❌ | ✔️ | ❌ |   ❌ | ❌ | ✔️ | ❌ |   ❌ | ❌ | ✔️ | ❌
 # Cases
 1.cjs

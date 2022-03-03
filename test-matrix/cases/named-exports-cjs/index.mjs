@@ -16,7 +16,7 @@ const checks = {
 };
 
 if (typeof process !== 'undefined' && process.argv[2] === 'columns') {
-    console.log('| | ' + results.map((_, x) => Object.keys(checks).map(c => `${x + 1}:<br>${c}`).join(' | ')).join(' |  '));
+    console.log('| | ' + results.map((_, x) => Object.keys(checks).map(c => `${x + 1}.cjs:<br>${c}`).join(' | ')).join(' |  '));
     console.log('| --- | ' + results.map((_, x) => Object.keys(checks).map(c => '---').join(' | ')).join(' |  '));
 } else {
     const row = results.map(namespace => Object.keys(checks).map(key => checks[key](namespace)).join(' | ')).join(' |   ')
