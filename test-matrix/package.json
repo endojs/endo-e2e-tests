@@ -1,0 +1,24 @@
+{
+  "name": "test-matrix",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run build:webpack && npm run build:parcel && bash run.sh>table.md",
+    "build:webpack": "webpack --config cases/named-exports-cjs/webpack.config.js",
+    "build:parcel": "cd ./cases/named-exports-cjs/ && parcel build --no-source-maps --no-cache"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "endo": "^0.1.0",
+    "parcel": "^2.3.2",
+    "process": "^0.11.10",
+    "webpack": "^5.69.1",
+    "webpack-cli": "^4.9.2"
+  },
+  "dependencies": {
+    "ses": "^0.15.10"
+  }
+}

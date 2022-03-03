@@ -52,3 +52,15 @@ Existing files will not be overwritten.
 
 Each file in `test-imports/cases` is used when you run tests.  
 A test case must export `expected` and `actual` - these two will be passed to Ava's `deepEqual` assertion.
+
+
+# Import behavior matrix
+
+Go to [Import behavior matrix table](./test-matrix/table.md)
+## Generating
+
+Go to test-matrix and run
+```
+npm ci 
+npm test
+```
