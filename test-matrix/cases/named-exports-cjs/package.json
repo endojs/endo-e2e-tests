@@ -1,5 +1,5 @@
 {
-    "name": "matrix",
-    "source": "index.mjs",
-    "main": "dist/parcel.js"
+  "name": "matrix",
+  "source": "index.mjs",
+  "main": "dist/parcel.js"
 }

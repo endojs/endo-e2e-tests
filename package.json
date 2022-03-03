@@ -7,7 +7,7 @@
   "scripts": {
     "install-cases": "cd test && npm i --ignore-scripts",
     "test": "ava",
-    "prettier": "prettier --write './**/*'",
+    "prettier": "prettier --write .",
     "generate-cases": "node test-imports/generate-cases.cjs"
   },
   "keywords": [],
@@ -15,7 +15,7 @@
   "license": "ISC",
   "devDependencies": {
     "ava": "^4.0.1",
-    "prettier": "^1.19.1"
+    "prettier": "^2.5.1"
   },
   "dependencies": {
     "@endo/compartment-mapper": "^0.6.5",

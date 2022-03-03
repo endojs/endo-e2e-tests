@@ -10,17 +10,17 @@ export function scaffold({ importLocation, modules = {}, globals = {} }) {
     testPackages() {
       const cases = fs.readdirSync(localUrl('./cases/').replace('file://', ''));
 
-      cases.forEach(testCase => {
-        const read = async location =>
+      cases.forEach((testCase) => {
+        const read = async (location) =>
           fs.promises.readFile(new URL(location).pathname);
         const pkg = localUrl(`./cases/${testCase}`);
-        test(`⬢ ${testCase}    Node.js baseline`, async t => {
+        test(`⬢ ${testCase}    Node.js baseline`, async (t) => {
           t.plan(1);
 
           const namespace = await import(pkg);
           return t.deepEqual(namespace.actual, namespace.expected);
         });
-        test(`▣ ${testCase}    Endo can import`, async t => {
+        test(`▣ ${testCase}    Endo can import`, async (t) => {
           t.plan(1);
 
           await importLocation(read, pkg, {
@@ -29,7 +29,7 @@ export function scaffold({ importLocation, modules = {}, globals = {} }) {
           });
           return t.pass();
         });
-        test(`▣ ${testCase}    Endo imports namespace`, async t => {
+        test(`▣ ${testCase}    Endo imports namespace`, async (t) => {
           t.plan(1);
 
           const { namespace } = await importLocation(read, pkg, {

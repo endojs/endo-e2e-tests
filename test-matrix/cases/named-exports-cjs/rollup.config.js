@@ -4,7 +4,7 @@ export default {
   input: 'index.mjs',
   output: {
     file: 'dist/rollup.js',
-    format: 'cjs'
+    format: 'cjs',
   },
-  plugins: [commonjs()]
+  plugins: [commonjs()],
 };

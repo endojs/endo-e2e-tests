@@ -39,8 +39,8 @@ export const actual = ${packageSignatureCode}
 `;
 
 const getExport = {
-  esm: async name => import(name),
-  cjs: async name => require(name),
+  esm: async (name) => import(name),
+  cjs: async (name) => require(name),
 };
 async function generateFiles(basepath, cases) {
   return Promise.all(
@@ -69,17 +69,17 @@ async function generate(basepath, { overwrite }) {
   const dependencies = Object.keys(pkgjson.dependencies);
 
   const requiredCases = [
-    ...dependencies.map(pkg => ({
+    ...dependencies.map((pkg) => ({
       type: 'cjs',
       name: pkg,
       file: `${pkg}.cjs`,
     })),
-    ...dependencies.map(pkg => ({
+    ...dependencies.map((pkg) => ({
       type: 'esm',
       name: pkg,
       file: `${pkg}.mjs`,
     })),
-  ].filter(c => !existingCases.includes(c.file));
+  ].filter((c) => !existingCases.includes(c.file));
 
   return generateFiles(basepath, requiredCases);
 }
@@ -92,7 +92,7 @@ const overwrite = process.argv[2] === 'overwrite';
 overwrite ||
   console.log('  Pass "overwrite" to regenerate existing tests too.');
 
-generate(casesFolder, { overwrite }).then(written => {
+generate(casesFolder, { overwrite }).then((written) => {
   console.log(`
 ${written.length} new tests generated
 ${written.sort().join('\n')}`);
