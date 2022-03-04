@@ -4,32 +4,32 @@
 
 What is available as a result of `import * as namespace from "x.cjs"`
 
-|  | node | endo | webpack | rollup | parcel | esbuild |
-|  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |
-| 1.cjs has default | ✔️ | 💥 | ✔️ | ✔️ | ❌ | ✔️ |
-| 1.cjs has unreachable | ✔️ | 💥 | ❌ | ❌ | ❌ | ❌ |
-| 1.cjs has even | ✔️ | 💥 | ✔️ | ✔️ | ✔️ | ✔️ |
-| 1.cjs has default.even | ✔️ | 💥 | ✔️ | ✔️ | ❌ | ✔️ |
-| 2.cjs has default | ✔️ | 💥 | ✔️ | ✔️ | ❌ | ✔️ |
-| 2.cjs has unreachable | ✔️ | 💥 | ❌ | ❌ | ❌ | ❌ |
-| 2.cjs has even | ❌ | 💥 | ✔️ | ✔️ | ✔️ | ✔️ |
-| 2.cjs has default.even | ✔️ | 💥 | ✔️ | ✔️ | ❌ | ✔️ |
-| 3.cjs has default | ✔️ | 💥 | ✔️ | ✔️ | ❌ | ✔️ |
-| 3.cjs has unreachable | ✔️ | 💥 | ❌ | ❌ | ❌ | ❌ |
-| 3.cjs has even | ❌ | 💥 | ✔️ | ✔️ | ✔️ | ✔️ |
-| 3.cjs has default.even | ✔️ | 💥 | ✔️ | ✔️ | ❌ | ✔️ |
-| 4.cjs has default | ✔️ | 💥 | ✔️ | ✔️ | ❌ | ✔️ |
-| 4.cjs has unreachable | ✔️ | 💥 | ❌ | ❌ | ❌ | ❌ |
-| 4.cjs has even | ✔️ | 💥 | ✔️ | ✔️ | ✔️ | ✔️ |
-| 4.cjs has default.even | ✔️ | 💥 | ✔️ | ✔️ | ❌ | ✔️ |
-| 5.cjs has default | ✔️ | 💥 | ✔️ | ✔️ | ❌ | ✔️ |
-| 5.cjs has unreachable | ❌ | 💥 | ❌ | ❌ | ❌ | ❌ |
-| 5.cjs has even | ❌ | 💥 | ✔️ | ✔️ | ✔️ | ✔️ |
-| 5.cjs has default.even | ✔️ | 💥 | ✔️ | ✔️ | ❌ | ✔️ |
+|  | node | endo | webpack | rollup | parcel | esbuild | typescript | TS esModuleInterop |
+|  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |
+| [1.cjs](#file-1cjs) has default | ✔️ | [💥](#endo-error) | ✔️ | ✔️ | ❌ | ✔️ | ❌ | ✔️ |
+| [1.cjs](#file-1cjs) has unreachable | ✔️ | [💥](#endo-error) | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| [1.cjs](#file-1cjs) has even | ✔️ | [💥](#endo-error) | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ |
+| [1.cjs](#file-1cjs) has default.even | ✔️ | [💥](#endo-error) | ✔️ | ✔️ | ❌ | ✔️ | ❌ | ✔️ |
+| [2.cjs](#file-2cjs) has default | ✔️ | [💥](#endo-error) | ✔️ | ✔️ | ❌ | ✔️ | ❌ | ✔️ |
+| [2.cjs](#file-2cjs) has unreachable | ✔️ | [💥](#endo-error) | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| [2.cjs](#file-2cjs) has even | ❌ | [💥](#endo-error) | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ |
+| [2.cjs](#file-2cjs) has default.even | ✔️ | [💥](#endo-error) | ✔️ | ✔️ | ❌ | ✔️ | ❌ | ✔️ |
+| [3.cjs](#file-3cjs) has default | ✔️ | [💥](#endo-error) | ✔️ | ✔️ | ❌ | ✔️ | ❌ | ❌ |
+| [3.cjs](#file-3cjs) has unreachable | ✔️ | [💥](#endo-error) | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| [3.cjs](#file-3cjs) has even | ❌ | [💥](#endo-error) | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ |
+| [3.cjs](#file-3cjs) has default.even | ✔️ | [💥](#endo-error) | ✔️ | ✔️ | ❌ | ✔️ | ❌ | ❌ |
+| [4.cjs](#file-4cjs) has default | ✔️ | [💥](#endo-error) | ✔️ | ✔️ | ❌ | ✔️ | ❌ | ❌ |
+| [4.cjs](#file-4cjs) has unreachable | ✔️ | [💥](#endo-error) | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| [4.cjs](#file-4cjs) has even | ✔️ | [💥](#endo-error) | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ |
+| [4.cjs](#file-4cjs) has default.even | ✔️ | [💥](#endo-error) | ✔️ | ✔️ | ❌ | ✔️ | ❌ | ❌ |
+| [5.cjs](#file-5cjs) has default | ✔️ | [💥](#endo-error) | ✔️ | ✔️ | ❌ | ✔️ | ❌ | ✔️ |
+| [5.cjs](#file-5cjs) has unreachable | ❌ | [💥](#endo-error) | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| [5.cjs](#file-5cjs) has even | ❌ | [💥](#endo-error) | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ |
+| [5.cjs](#file-5cjs) has default.even | ✔️ | [💥](#endo-error) | ✔️ | ✔️ | ❌ | ✔️ | ❌ | ✔️ |
 
 # Cases
 
-1.cjs
+### file 1.cjs
 ```js
 module.exports = {
   even: n => n % 2 === 0
@@ -41,7 +41,7 @@ if (false) {
 ```
 
 
-2.cjs
+### file 2.cjs
 ```js
 module.exports = {
   version: '1.1.0',
@@ -54,7 +54,7 @@ if (false) {
 ```
 
 
-3.cjs
+### file 3.cjs
 ```js
 module.exports = {
   __esModule: true,
@@ -68,7 +68,7 @@ if (false) {
 ```
 
 
-4.cjs
+### file 4.cjs
 ```js
 exports.__esModule = true;
 
@@ -81,7 +81,7 @@ if (false) {
 ```
 
 
-5.cjs
+### file 5.cjs
 ```js
 const api = {
   version: '1.1.0',
@@ -93,5 +93,26 @@ if (false) {
 module.exports = api
 ```
 
-    
+  
+
+# 💥 Errors
+
+
+### endo error
+```
+Command failed: node cases/named-exports-cjs/endo.mjs
+ses.umd.js:4820
+          throw SyntaxError(
+                ^
+
+SyntaxError: The requested module './1.cjs' does not provide an export named '*'
+    at imports (ses.umd.js:4820:17)
+    at eval (index.mjs:1:111)
+    at execute (ses.umd.js:4891:9)
+    at compartmentImportNow (ses.umd.js:5203:3)
+    at ses.umd.js:5272:27
+    at async endo.mjs:13:1
+
+```   
+
     

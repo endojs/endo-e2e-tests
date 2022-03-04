@@ -5,7 +5,12 @@ import * as ns_4 from './4.cjs';
 import * as ns_5 from './5.cjs';
 
 export const results = [ns_1, ns_2, ns_3, ns_4, ns_5];
-import { checks } from './checks.mjs';
+const checks = {
+    'has default': (ns) => Object.hasOwn(ns, 'default'),
+    'has unreachable': (ns) => Object.hasOwn(ns, 'unreachable'),
+    'has even': (ns) => Object.hasOwn(ns, 'even'),
+    'has default.even': (ns) => !!(ns && ns.default && ns.default.even),
+};
 
 const data = results
     .map((namespace) =>

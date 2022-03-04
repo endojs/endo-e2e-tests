@@ -4,8 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npm run build && node generate.mjs > table.md",
-    "build": "npm run build:webpack && npm run build:parcel && npm run build:rollup && npm run build:esbuild",
+    "test": "npm run build && npm run generate",
+    "generate": "node generate.mjs > table.md",
+    "build": "npm run build:webpack && npm run build:parcel && npm run build:rollup && npm run build:esbuild && npm run build:tsc && npm run build:tscinterop",
+    "build:tsc": "tsc cases/named-exports-cjs/index.mjs --allowJs --outdir cases/named-exports-cjs/dist/tsc/ && mv cases/named-exports-cjs/dist/tsc/index.mjs cases/named-exports-cjs/dist/tsc/index.js ",
+    "build:tscinterop": "tsc cases/named-exports-cjs/index.mjs --esModuleInterop --allowJs --outdir cases/named-exports-cjs/dist/tscinterop/ && mv cases/named-exports-cjs/dist/tscinterop/index.mjs cases/named-exports-cjs/dist/tscinterop/index.js ",
     "build:esbuild": "esbuild cases/named-exports-cjs/index.mjs  --bundle --outfile=cases/named-exports-cjs/dist/esbuild.js",
     "build:webpack": "webpack --config cases/named-exports-cjs/webpack.config.js",
     "build:rollup": "cd ./cases/named-exports-cjs/ && rollup  --config rollup.config.js",
@@ -21,6 +24,7 @@
     "parcel": "^2.3.2",
     "process": "^0.11.10",
     "rollup": "^2.69.0",
+    "typescript": "^4.6.2",
     "webpack": "^5.69.1",
     "webpack-cli": "^4.9.2"
   },
