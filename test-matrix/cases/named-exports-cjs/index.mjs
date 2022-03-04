@@ -3,8 +3,9 @@ import * as ns_2 from './2.cjs';
 import * as ns_3 from './3.cjs';
 import * as ns_4 from './4.cjs';
 import * as ns_5 from './5.cjs';
+import * as ns_6 from './6.cjs';
 
-export const results = [ns_1, ns_2, ns_3, ns_4, ns_5];
+export const results = [ns_1, ns_2, ns_3, ns_4, ns_5, ns_6];
 const checks = {
     'has default': (ns) => Object.hasOwn(ns, 'default'),
     'has unreachable': (ns) => Object.hasOwn(ns, 'unreachable'),
