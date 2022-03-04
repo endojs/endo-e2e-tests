@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "npm run build && node generate.mjs > table.md",
-    "build": "npm run build:webpack && npm run build:parcel && npm run build:rollup",
+    "build": "npm run build:webpack && npm run build:parcel && npm run build:rollup && npm run build:esbuild",
+    "build:esbuild": "esbuild cases/named-exports-cjs/index.mjs  --bundle --outfile=cases/named-exports-cjs/dist/esbuild.js",
     "build:webpack": "webpack --config cases/named-exports-cjs/webpack.config.js",
     "build:rollup": "cd ./cases/named-exports-cjs/ && rollup  --config rollup.config.js",
     "build:parcel": "cd ./cases/named-exports-cjs/ && parcel build --no-source-maps --no-cache"
@@ -16,6 +17,7 @@
   "devDependencies": {
     "@rollup/plugin-commonjs": "^21.0.2",
     "endo": "^0.1.0",
+    "esbuild": "^0.14.25",
     "parcel": "^2.3.2",
     "process": "^0.11.10",
     "rollup": "^2.69.0",

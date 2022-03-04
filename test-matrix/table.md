@@ -4,28 +4,28 @@
 
 What is available as a result of `import * as namespace from "x.cjs"`
 
-|  | node | endo | webpack | rollup | parcel |
-|  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |
-| 1.cjs has default | ✔️ | 💥 | ✔️ | ✔️ | ❌ |
-| 1.cjs has unreachable | ✔️ | 💥 | ❌ | ❌ | ❌ |
-| 1.cjs has even | ✔️ | 💥 | ✔️ | ✔️ | ✔️ |
-| 1.cjs has default.even | ✔️ | 💥 | ✔️ | ✔️ | ❌ |
-| 2.cjs has default | ✔️ | 💥 | ✔️ | ✔️ | ❌ |
-| 2.cjs has unreachable | ✔️ | 💥 | ❌ | ❌ | ❌ |
-| 2.cjs has even | ❌ | 💥 | ✔️ | ✔️ | ✔️ |
-| 2.cjs has default.even | ✔️ | 💥 | ✔️ | ✔️ | ❌ |
-| 3.cjs has default | ✔️ | 💥 | ✔️ | ✔️ | ❌ |
-| 3.cjs has unreachable | ✔️ | 💥 | ❌ | ❌ | ❌ |
-| 3.cjs has even | ❌ | 💥 | ✔️ | ✔️ | ✔️ |
-| 3.cjs has default.even | ✔️ | 💥 | ✔️ | ✔️ | ❌ |
-| 4.cjs has default | ✔️ | 💥 | ✔️ | ✔️ | ❌ |
-| 4.cjs has unreachable | ✔️ | 💥 | ❌ | ❌ | ❌ |
-| 4.cjs has even | ✔️ | 💥 | ✔️ | ✔️ | ✔️ |
-| 4.cjs has default.even | ✔️ | 💥 | ✔️ | ✔️ | ❌ |
-| 5.cjs has default | ✔️ | 💥 | ✔️ | ✔️ | ❌ |
-| 5.cjs has unreachable | ❌ | 💥 | ❌ | ❌ | ❌ |
-| 5.cjs has even | ❌ | 💥 | ✔️ | ✔️ | ✔️ |
-| 5.cjs has default.even | ✔️ | 💥 | ✔️ | ✔️ | ❌ |
+|  | node | endo | webpack | rollup | parcel | esbuild |
+|  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |
+| 1.cjs has default | ✔️ | 💥 | ✔️ | ✔️ | ❌ | ✔️ |
+| 1.cjs has unreachable | ✔️ | 💥 | ❌ | ❌ | ❌ | ❌ |
+| 1.cjs has even | ✔️ | 💥 | ✔️ | ✔️ | ✔️ | ✔️ |
+| 1.cjs has default.even | ✔️ | 💥 | ✔️ | ✔️ | ❌ | ✔️ |
+| 2.cjs has default | ✔️ | 💥 | ✔️ | ✔️ | ❌ | ✔️ |
+| 2.cjs has unreachable | ✔️ | 💥 | ❌ | ❌ | ❌ | ❌ |
+| 2.cjs has even | ❌ | 💥 | ✔️ | ✔️ | ✔️ | ✔️ |
+| 2.cjs has default.even | ✔️ | 💥 | ✔️ | ✔️ | ❌ | ✔️ |
+| 3.cjs has default | ✔️ | 💥 | ✔️ | ✔️ | ❌ | ✔️ |
+| 3.cjs has unreachable | ✔️ | 💥 | ❌ | ❌ | ❌ | ❌ |
+| 3.cjs has even | ❌ | 💥 | ✔️ | ✔️ | ✔️ | ✔️ |
+| 3.cjs has default.even | ✔️ | 💥 | ✔️ | ✔️ | ❌ | ✔️ |
+| 4.cjs has default | ✔️ | 💥 | ✔️ | ✔️ | ❌ | ✔️ |
+| 4.cjs has unreachable | ✔️ | 💥 | ❌ | ❌ | ❌ | ❌ |
+| 4.cjs has even | ✔️ | 💥 | ✔️ | ✔️ | ✔️ | ✔️ |
+| 4.cjs has default.even | ✔️ | 💥 | ✔️ | ✔️ | ❌ | ✔️ |
+| 5.cjs has default | ✔️ | 💥 | ✔️ | ✔️ | ❌ | ✔️ |
+| 5.cjs has unreachable | ❌ | 💥 | ❌ | ❌ | ❌ | ❌ |
+| 5.cjs has even | ❌ | 💥 | ✔️ | ✔️ | ✔️ | ✔️ |
+| 5.cjs has default.even | ✔️ | 💥 | ✔️ | ✔️ | ❌ | ✔️ |
 
 # Cases
 

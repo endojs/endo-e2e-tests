@@ -5,11 +5,12 @@ import { readFileSync } from 'fs';
 const CASE_PATH = 'cases/named-exports-cjs/'
 
 const cases = [
-    { name: 'node', file: `${CASE_PATH}/index.mjs`, data: null },
-    { name: 'endo', file: `${CASE_PATH}/endo.mjs`, data: null },
-    { name: 'webpack', file: `${CASE_PATH}/dist/webpack.js`, data: null },
-    { name: 'rollup', file: `${CASE_PATH}/dist/rollup.js`, data: null },
-    { name: 'parcel', file: `${CASE_PATH}/dist/parcel.js`, data: null },
+    { name: 'node', file: `${CASE_PATH}/index.mjs` },
+    { name: 'endo', file: `${CASE_PATH}/endo.mjs` },
+    { name: 'webpack', file: `${CASE_PATH}/dist/webpack.js` },
+    { name: 'rollup', file: `${CASE_PATH}/dist/rollup.js` },
+    { name: 'parcel', file: `${CASE_PATH}/dist/parcel.js` },
+    { name: 'esbuild', file: `${CASE_PATH}/dist/esbuild.js` },
 ]
 
 const promiseExec = promisify(execFile);
