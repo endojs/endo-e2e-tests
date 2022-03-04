@@ -4,5 +4,5 @@ module.exports = {
 };
 
 if (false) {
-  module.exports.no = 1;
+  module.exports.unreachable = 1;
 }

@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npm run build:webpack && npm run build:parcel && npm run build:rollup && bash run.sh>table.md",
+    "test": "npm run build && node generate.mjs > table.md",
+    "build": "npm run build:webpack && npm run build:parcel && npm run build:rollup",
     "build:webpack": "webpack --config cases/named-exports-cjs/webpack.config.js",
     "build:rollup": "cd ./cases/named-exports-cjs/ && rollup  --config rollup.config.js",
     "build:parcel": "cd ./cases/named-exports-cjs/ && parcel build --no-source-maps --no-cache"

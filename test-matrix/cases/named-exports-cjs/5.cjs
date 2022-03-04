@@ -3,6 +3,6 @@ const api = {
   even: n => n % 2 === 0,
 }
 if (false) {
-  api.no = 1;
+  api.unreachable = 1;
 }
 module.exports = api
