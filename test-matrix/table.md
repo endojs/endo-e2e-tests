@@ -1,24 +1,51 @@
+
+
 # Import behavior matrix
+
 What is available as a result of `import * as namespace from "x.cjs"`
-| | 1.cjs:<br>default | 1.cjs:<br>no | 1.cjs:<br>even | 1.cjs:<br>default<br>.even |  2.cjs:<br>default | 2.cjs:<br>no | 2.cjs:<br>even | 2.cjs:<br>default<br>.even |  3.cjs:<br>default | 3.cjs:<br>no | 3.cjs:<br>even | 3.cjs:<br>default<br>.even |  4.cjs:<br>default | 4.cjs:<br>no | 4.cjs:<br>even | 4.cjs:<br>default<br>.even |  5.cjs:<br>default | 5.cjs:<br>no | 5.cjs:<br>even | 5.cjs:<br>default<br>.even
-| --- | --- | --- | --- | --- |  --- | --- | --- | --- |  --- | --- | --- | --- |  --- | --- | --- | --- |  --- | --- | --- | ---
-| node | ✔️ | ✔️ | ✔️ | ✔️ |   ✔️ | ✔️ | ❌ | ✔️ |   ✔️ | ✔️ | ❌ | ✔️ |   ✔️ | ✔️ | ✔️ | ✔️ |   ✔️ | ❌ | ❌ | ✔️
-| endo | ✔️ | ✔️ | ✔️ | ✔️ |   ✔️ | ✔️ | ❌ | ✔️ |   ✔️ | ✔️ | ❌ | ✔️ |   ✔️ | ✔️ | ✔️ | ✔️ |   ✔️ | ❌ | ❌ | ✔️
-| webpack | ✔️ | ❌ | ✔️ | ✔️ |   ✔️ | ❌ | ✔️ | ✔️ |   ✔️ | ❌ | ✔️ | ✔️ |   ✔️ | ❌ | ✔️ | ✔️ |   ✔️ | ❌ | ✔️ | ✔️
-| rollup | ✔️ | ❌ | ✔️ | ✔️ |   ✔️ | ❌ | ✔️ | ✔️ |   ✔️ | ❌ | ✔️ | ✔️ |   ✔️ | ❌ | ✔️ | ✔️ |   ✔️ | ❌ | ✔️ | ✔️
-| parcel | ❌ | ❌ | ✔️ | ❌ |   ❌ | ❌ | ✔️ | ❌ |   ❌ | ❌ | ✔️ | ❌ |   ❌ | ❌ | ✔️ | ❌ |   ❌ | ❌ | ✔️ | ❌
+
+|  | node | endo | webpack | rollup | parcel | esbuild | typescript | TS esModuleInterop |
+|  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |
+| [1.cjs](#file-1cjs) has default | ✔️ | ✔️ | ✔️ | ✔️ | ❌ | ✔️ | ❌ | ✔️ |
+| [1.cjs](#file-1cjs) has unreachable | ✔️ | ✔️ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| [1.cjs](#file-1cjs) has even | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ |
+| [1.cjs](#file-1cjs) has default.even | ✔️ | ✔️ | ✔️ | ✔️ | ❌ | ✔️ | ❌ | ✔️ |
+| [2.cjs](#file-2cjs) has default | ✔️ | ✔️ | ✔️ | ✔️ | ❌ | ✔️ | ❌ | ✔️ |
+| [2.cjs](#file-2cjs) has unreachable | ✔️ | ✔️ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| [2.cjs](#file-2cjs) has even | ❌ | ❌ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ |
+| [2.cjs](#file-2cjs) has default.even | ✔️ | ✔️ | ✔️ | ✔️ | ❌ | ✔️ | ❌ | ✔️ |
+| [3.cjs](#file-3cjs) has default | ✔️ | ✔️ | ✔️ | ✔️ | ❌ | ✔️ | ❌ | ❌ |
+| [3.cjs](#file-3cjs) has unreachable | ✔️ | ✔️ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| [3.cjs](#file-3cjs) has even | ❌ | ❌ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ |
+| [3.cjs](#file-3cjs) has default.even | ✔️ | ✔️ | ✔️ | ✔️ | ❌ | ✔️ | ❌ | ❌ |
+| [4.cjs](#file-4cjs) has default | ✔️ | ✔️ | ✔️ | ✔️ | ❌ | ✔️ | ❌ | ❌ |
+| [4.cjs](#file-4cjs) has unreachable | ✔️ | ✔️ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| [4.cjs](#file-4cjs) has even | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ |
+| [4.cjs](#file-4cjs) has default.even | ✔️ | ✔️ | ✔️ | ✔️ | ❌ | ✔️ | ❌ | ❌ |
+| [5.cjs](#file-5cjs) has default | ✔️ | ✔️ | ✔️ | ✔️ | ❌ | ✔️ | ❌ | ✔️ |
+| [5.cjs](#file-5cjs) has unreachable | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| [5.cjs](#file-5cjs) has even | ❌ | ❌ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ |
+| [5.cjs](#file-5cjs) has default.even | ✔️ | ✔️ | ✔️ | ✔️ | ❌ | ✔️ | ❌ | ✔️ |
+| [6.cjs](#file-6cjs) has default | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ |
+| [6.cjs](#file-6cjs) has unreachable | ✔️ | ✔️ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| [6.cjs](#file-6cjs) has even | ✔️ | ✔️ | ❌ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ |
+| [6.cjs](#file-6cjs) has default.even | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ |
+
 # Cases
-1.cjs
+
+### file 1.cjs
 ```js
 module.exports = {
   even: n => n % 2 === 0
 };
 
 if (false) {
-  module.exports.no = 1;
+  module.exports.unreachable = 1;
 }
 ```
-2.cjs
+
+
+### file 2.cjs
 ```js
 module.exports = {
   version: '1.1.0',
@@ -26,10 +53,12 @@ module.exports = {
 };
 
 if (false) {
-  module.exports.no = 1;
+  module.exports.unreachable = 1;
 }
 ```
-3.cjs
+
+
+### file 3.cjs
 ```js
 module.exports = {
   __esModule: true,
@@ -38,10 +67,12 @@ module.exports = {
 };
 
 if (false) {
-  module.exports.no = 1;
+  module.exports.unreachable = 1;
 }
 ```
-4.cjs
+
+
+### file 4.cjs
 ```js
 exports.__esModule = true;
 
@@ -49,17 +80,39 @@ exports.version = '1.1.0';
 exports.even = n => n % 2 === 0;
 
 if (false) {
-  exports.no = 1;
+  exports.unreachable = 1;
 }
 ```
-5.cjs
+
+
+### file 5.cjs
 ```js
 const api = {
   version: '1.1.0',
   even: n => n % 2 === 0,
 }
 if (false) {
-  api.no = 1;
+  api.unreachable = 1;
 }
 module.exports = api
 ```
+
+
+### file 6.cjs
+```js
+const even = n => n % 2 === 0;
+if (false) {
+  module.exports.unreachable = 1;
+}
+// "The Infamous Triplet"
+module.exports = even
+module.exports.even = even
+module.exports.default = even
+```
+
+  
+
+# 💥 Errors
+
+
+    

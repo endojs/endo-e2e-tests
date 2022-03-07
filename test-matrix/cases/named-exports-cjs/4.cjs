@@ -4,5 +4,5 @@ exports.version = '1.1.0';
 exports.even = n => n % 2 === 0;
 
 if (false) {
-  exports.no = 1;
+  exports.unreachable = 1;
 }
