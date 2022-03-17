@@ -1,6 +1,6 @@
 const fs = require('fs/promises');
 const path = require('path');
-const pkgjson = require('./package.json');
+const pkgjson = require('../package.json');
 
 const packageSignatureCode = `{ 
     '*': { type: typeof all, keys: Object.keys(all || {}).filter(a=>a).sort() },
@@ -50,7 +50,11 @@ async function generateFiles(basepath, cases) {
         all = await getExport[type](name);
       } catch (e) {
         // cannot require esm
-        console.error(`Skipping ${file} because: `, e.message || e);
+        console.error(
+          `--- ⚠️ Skipping ${file} because: ---\n`,
+          e.message || e,
+          '\n---',
+        );
         return;
       }
       const expected = JSON.stringify(
@@ -72,19 +76,20 @@ async function generate(basepath, { overwrite }) {
     ...dependencies.map((pkg) => ({
       type: 'cjs',
       name: pkg,
-      file: `${pkg}.cjs`,
+      file: `${pkg.replace(/\/@/g, '_')}.cjs`,
     })),
     ...dependencies.map((pkg) => ({
       type: 'esm',
       name: pkg,
-      file: `${pkg}.mjs`,
+      file: `${pkg.replace(/\/@/g, '_')}.mjs`,
     })),
   ].filter((c) => !existingCases.includes(c.file));
 
-  return generateFiles(basepath, requiredCases);
+  const written = await generateFiles(basepath, requiredCases);
+  return written.filter((n) => n);
 }
 
-const casesFolder = path.join(__dirname, './cases');
+const casesFolder = path.join(__dirname, '../cases');
 
 console.log(`Generating tests for all packaes listed as dependencies in ${__dirname}/package.json. 
   Tests are written to ${casesFolder}`);

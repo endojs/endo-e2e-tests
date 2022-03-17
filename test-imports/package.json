@@ -2,7 +2,14 @@
   "name": "cases",
   "version": "1.0.0",
   "description": "",
+  "scripts": {
+    "start": "npm ci --ignore-scripts && npm run generate-cases",
+    "install-case": "npm i --ignore-scripts --save-exact",
+    "test": "ava",
+    "generate-cases": "node ./tools/generate-cases.cjs"
+  },
   "dependencies": {
+    "elliptic": "^6.5.4",
     "ethereumjs-util": "7.1.0",
     "is-array": "1.0.1",
     "lowdb": "3.0.0",
@@ -12,7 +19,19 @@
     "punycode": "2.1.1",
     "uuid": "8.3.2"
   },
+  "devDependencies": {
+    "@endo/compartment-mapper": "^0.7.1",
+    "ava": "^4.1.0",
+    "ses": "^0.15.11"
+  },
+  "private": true,
   "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "author": "naugtur",
+  "license": "Apache-2.0",
+  "ava": {
+    "files": [
+      "./index.mjs"
+    ],
+    "timeout": "2m"
+  }
 }

@@ -1,7 +1,9 @@
-import 'ses';
-import { importLocation } from '@endo/compartment-mapper';
+// import 'ses';
+// import { importLocation } from '@endo/compartment-mapper';
+import '../../endo/packages/ses/index.js';
+import { importLocation } from '../../endo/packages/compartment-mapper/index.js';
 
-import { scaffold } from './scaffold.mjs';
+import { scaffold } from './tools/scaffold.mjs';
 
 const readName = (name) => async (s) =>
   Buffer.from(
@@ -21,6 +23,7 @@ for (let name of [
   'crypto',
   'events',
   'stream',
+  'inherits',
 ]) {
   modules[name] = (
     await importLocation(readName(name), 'file:///whatever.cjs', {
@@ -31,7 +34,9 @@ for (let name of [
 
 const { testPackages } = scaffold({
   importLocation,
-  globals: { process: { env: {} } },
+  globals: { process: { env: {} }, global },
   modules,
+  strictStar: false,
+  // only: 'ethereumjs-util.mjs'
 });
 testPackages();
