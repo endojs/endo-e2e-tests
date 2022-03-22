@@ -8,38 +8,38 @@ What is available as a result of `import * as namespace from "x.cjs"`
 ☑ - own property, but falsy  
 ✔️ - present and truthy  
 
-|  | endo | node-v12 | node-v14 | node-v16 | node-v17 | esbuild | parcel | rollup | tsc | tscInterop | webpack |
-|  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |
-| [1.cjs](#file-1cjs) even | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ |
-| [1.cjs](#file-1cjs) default | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ❌ | ✔️ | ❌ | ✔️ | ✔️ |
-| [1.cjs](#file-1cjs) default.even | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ❌ | ✔️ | ❌ | ✔️ | ✔️ |
-| [2.cjs](#file-2cjs) even | ✔️ | ❌ | ❌ | ❌ | ❌ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ |
-| [2.cjs](#file-2cjs) default | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ❌ | ✔️ | ❌ | ✔️ | ✔️ |
-| [2.cjs](#file-2cjs) default.even | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ❌ | ✔️ | ❌ | ✔️ | ✔️ |
-| [3.cjs](#file-3cjs) even | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
-| [3.cjs](#file-3cjs) default | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ |
-| [3.cjs](#file-3cjs) default.even | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ✔️ | ✔️ | ✔️ | ✔️ | ❌ |
-| [4.cjs](#file-4cjs) even | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ |
-| [4.cjs](#file-4cjs) default | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ |
-| [4.cjs](#file-4cjs) default.even | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ |
-| [5.cjs](#file-5cjs) even | ✔️ | ❌ | ❌ | ❌ | ❌ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ |
-| [5.cjs](#file-5cjs) default | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ❌ | ✔️ | ❌ | ✔️ | ✔️ |
-| [5.cjs](#file-5cjs) default.even | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ❌ | ✔️ | ❌ | ✔️ | ✔️ |
-| [6.cjs](#file-6cjs) even | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ❌ |
-| [6.cjs](#file-6cjs) default | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ |
-| [6.cjs](#file-6cjs) default.even | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ |
-| [7.cjs](#file-7cjs) even | ☑ | ☑ | ☑ | ☑ | ☑ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
-| [7.cjs](#file-7cjs) default | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ❌ | ❌ | ❌ | ✔️ | ✔️ |
-| [7.cjs](#file-7cjs) default.even | ☑ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
-| [8.cjs](#file-8cjs) even | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ |
-| [8.cjs](#file-8cjs) default | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ |
-| [8.cjs](#file-8cjs) default.even | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ☑ | ✔️ | ☑ | ✔️ | ✔️ |
-| [9.cjs](#file-9cjs) even | ✔️ | ❌ | ❌ | ❌ | ❌ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ |
-| [9.cjs](#file-9cjs) default | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ❌ | ✔️ | ❌ | ❌ | ✔️ |
-| [9.cjs](#file-9cjs) default.even | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ❌ | ✔️ | ❌ | ❌ | ✔️ |
-| [10.cjs](#file-10cjs) even | ✔️ | ❌ | ❌ | ❌ | ❌ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ |
-| [10.cjs](#file-10cjs) default | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ❌ | ✔️ | ❌ | ✔️ | ✔️ |
-| [10.cjs](#file-10cjs) default.even | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ❌ | ✔️ | ❌ | ✔️ | ✔️ |
+|  | endo | node-v12.17 | node-v12.22 | node-v16 | esbuild | parcel | rollup | tsc | tscInterop | webpack |
+|  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |
+| [1.cjs](#file-1cjs) even | ✔️ | ❌ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ |
+| [1.cjs](#file-1cjs) default | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ❌ | ✔️ | ❌ | ✔️ | ✔️ |
+| [1.cjs](#file-1cjs) default.even | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ❌ | ✔️ | ❌ | ✔️ | ✔️ |
+| [2.cjs](#file-2cjs) even | ✔️ | ❌ | ❌ | ❌ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ |
+| [2.cjs](#file-2cjs) default | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ❌ | ✔️ | ❌ | ✔️ | ✔️ |
+| [2.cjs](#file-2cjs) default.even | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ❌ | ✔️ | ❌ | ✔️ | ✔️ |
+| [3.cjs](#file-3cjs) even | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| [3.cjs](#file-3cjs) default | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ |
+| [3.cjs](#file-3cjs) default.even | ❌ | ❌ | ❌ | ❌ | ❌ | ✔️ | ✔️ | ✔️ | ✔️ | ❌ |
+| [4.cjs](#file-4cjs) even | ✔️ | ❌ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ |
+| [4.cjs](#file-4cjs) default | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ |
+| [4.cjs](#file-4cjs) default.even | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ |
+| [5.cjs](#file-5cjs) even | ✔️ | ❌ | ❌ | ❌ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ |
+| [5.cjs](#file-5cjs) default | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ❌ | ✔️ | ❌ | ✔️ | ✔️ |
+| [5.cjs](#file-5cjs) default.even | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ❌ | ✔️ | ❌ | ✔️ | ✔️ |
+| [6.cjs](#file-6cjs) even | ✔️ | ❌ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ❌ |
+| [6.cjs](#file-6cjs) default | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ |
+| [6.cjs](#file-6cjs) default.even | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ |
+| [7.cjs](#file-7cjs) even | ☑ | ❌ | ☑ | ☑ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| [7.cjs](#file-7cjs) default | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ❌ | ❌ | ❌ | ✔️ | ✔️ |
+| [7.cjs](#file-7cjs) default.even | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| [8.cjs](#file-8cjs) even | ✔️ | ❌ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ |
+| [8.cjs](#file-8cjs) default | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ |
+| [8.cjs](#file-8cjs) default.even | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ☑ | ✔️ | ☑ | ✔️ | ✔️ |
+| [9.cjs](#file-9cjs) even | ✔️ | ❌ | ❌ | ❌ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ |
+| [9.cjs](#file-9cjs) default | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ❌ | ✔️ | ❌ | ❌ | ✔️ |
+| [9.cjs](#file-9cjs) default.even | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ❌ | ✔️ | ❌ | ❌ | ✔️ |
+| [10.cjs](#file-10cjs) even | ✔️ | ❌ | ❌ | ❌ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ |
+| [10.cjs](#file-10cjs) default | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ❌ | ✔️ | ❌ | ✔️ | ✔️ |
+| [10.cjs](#file-10cjs) default.even | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ❌ | ✔️ | ❌ | ✔️ | ✔️ |
 
 # Cases
 
@@ -173,7 +173,7 @@ defineThingy('even')
 tr:nth-child(3n+1){
   border-top:2px solid #333 !important;
 }
-td:nth-child(n+7){
+td:nth-child(n+6){
   background-color: #eee !important;
 }
 </style>

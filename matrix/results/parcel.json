@@ -2,7 +2,7 @@
   "name": "parcel",
   "bin": "node",
   "args": [
-    "/home/naugtur/work/metamask/endo-e2e-tests/matrix/cases/named-exports-cjs/dist/parcel.js"
+    "/home/naugtur/repo/endo-e2e-tests/matrix/cases/named-exports-cjs/dist/parcel.js"
   ],
   "data": [
     {

@@ -2,7 +2,7 @@
   "name": "endo",
   "bin": "node",
   "args": [
-    "/home/naugtur/work/metamask/endo-e2e-tests/matrix/cases/named-exports-cjs/endo.mjs"
+    "/home/naugtur/repo/endo-e2e-tests/matrix/cases/named-exports-cjs/endo.mjs"
   ],
   "data": [
     {
@@ -99,7 +99,7 @@
         true
       ],
       "default.even": [
-        true,
+        false,
         false
       ]
     },

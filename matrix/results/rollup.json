@@ -2,7 +2,7 @@
   "name": "rollup",
   "bin": "node",
   "args": [
-    "/home/naugtur/work/metamask/endo-e2e-tests/matrix/cases/named-exports-cjs/dist/rollup.js"
+    "/home/naugtur/repo/endo-e2e-tests/matrix/cases/named-exports-cjs/dist/rollup.js"
   ],
   "data": [
     {
