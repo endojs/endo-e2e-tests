@@ -1,0 +1,149 @@
+{
+  "name": "esbuild",
+  "bin": "node",
+  "args": [
+    "/home/naugtur/repo/endo-e2e-tests/matrix/cases/named-exports-cjs/dist/esbuild.js"
+  ],
+  "data": [
+    {
+      "even": [
+        true,
+        true
+      ],
+      "default": [
+        true,
+        true
+      ],
+      "default.even": [
+        true,
+        true
+      ]
+    },
+    {
+      "even": [
+        true,
+        true
+      ],
+      "default": [
+        true,
+        true
+      ],
+      "default.even": [
+        true,
+        true
+      ]
+    },
+    {
+      "even": [
+        false,
+        false
+      ],
+      "default": [
+        true,
+        true
+      ],
+      "default.even": [
+        false,
+        false
+      ]
+    },
+    {
+      "even": [
+        true,
+        true
+      ],
+      "default": [
+        true,
+        true
+      ],
+      "default.even": [
+        true,
+        true
+      ]
+    },
+    {
+      "even": [
+        true,
+        true
+      ],
+      "default": [
+        true,
+        true
+      ],
+      "default.even": [
+        true,
+        true
+      ]
+    },
+    {
+      "even": [
+        true,
+        true
+      ],
+      "default": [
+        true,
+        true
+      ],
+      "default.even": [
+        true,
+        true
+      ]
+    },
+    {
+      "even": [
+        false,
+        false
+      ],
+      "default": [
+        true,
+        true
+      ],
+      "default.even": [
+        false,
+        false
+      ]
+    },
+    {
+      "even": [
+        true,
+        true
+      ],
+      "default": [
+        true,
+        true
+      ],
+      "default.even": [
+        true,
+        true
+      ]
+    },
+    {
+      "even": [
+        true,
+        true
+      ],
+      "default": [
+        true,
+        true
+      ],
+      "default.even": [
+        true,
+        true
+      ]
+    },
+    {
+      "even": [
+        true,
+        true
+      ],
+      "default": [
+        true,
+        true
+      ],
+      "default.even": [
+        true,
+        true
+      ]
+    }
+  ]
+}

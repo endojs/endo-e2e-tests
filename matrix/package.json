@@ -1,11 +1,16 @@
 {
-  "name": "test-matrix",
+  "name": "matrix",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "private": true,
   "scripts": {
-    "test": "npm run build && npm run generate",
-    "generate": "node generate.mjs > table.md",
+    "start": "npm run build && npm run run-all && npm run generate",
+    "update-endo": "npm i ses@latest @endo/compartment-mapper@latest",
+    "run-all": "node ./tools/runTests.cjs",
+    "run-node": "node ./tools/runTests.cjs node",
+    "run-endo": "node ./tools/runTests.cjs endo",
+    "generate": "node ./tools/generateTable.cjs",
     "build": "npm run build:webpack && npm run build:parcel && npm run build:rollup && npm run build:esbuild && npm run build:tsc && npm run build:tscinterop",
     "build:tsc": "tsc cases/named-exports-cjs/index.mjs --allowJs --outdir cases/named-exports-cjs/dist/tsc/ && mv cases/named-exports-cjs/dist/tsc/index.mjs cases/named-exports-cjs/dist/tsc/index.js ",
     "build:tscinterop": "tsc cases/named-exports-cjs/index.mjs --esModuleInterop --allowJs --outdir cases/named-exports-cjs/dist/tscinterop/ && mv cases/named-exports-cjs/dist/tscinterop/index.mjs cases/named-exports-cjs/dist/tscinterop/index.js ",
@@ -16,10 +21,9 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "Apache-2.0",
   "devDependencies": {
     "@rollup/plugin-commonjs": "^21.0.2",
-    "endo": "^0.1.0",
     "esbuild": "^0.14.25",
     "parcel": "^2.3.2",
     "process": "^0.11.10",
@@ -29,6 +33,7 @@
     "webpack-cli": "^4.9.2"
   },
   "dependencies": {
-    "ses": "^0.15.10"
+    "@endo/compartment-mapper": "^0.7.1",
+    "ses": "^0.15.11"
   }
 }
