@@ -35,8 +35,8 @@
     },
     {
       "even": [
-        false,
-        false
+        true,
+        true
       ],
       "default": [
         true,
@@ -44,7 +44,7 @@
       ],
       "default.even": [
         false,
-        false
+        true
       ]
     },
     {

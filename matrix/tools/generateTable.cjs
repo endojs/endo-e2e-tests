@@ -20,7 +20,7 @@ function listResultsFor(results, { num, key }) {
 
 const TICKS = '```';
 const printMissing = () => '?';
-const printBooleans = ([x, y]) => (x ? (y ? '✔️' : '☑') : '❌');
+const printBooleans = ([own, truthy]) => (truthy ? '✔️' : (own ? '☑' : '❌'));
 const printError = (name) => `[💥](#${name}-error)`;
 function printTable(rows) {
   return rows.map((row) => `| ${row.join(' | ')} |`).join('\n');
@@ -44,7 +44,7 @@ function printErrors(results) {
       (r) => `
 ### ${r.name} error
 ${TICKS}
-${r.error.message.replace(/file:\/\/.*\//g, '')}
+${r.error?.message?.replace(/file:\/\/.*\//g, '')}
 ${TICKS}   
 `,
     );
@@ -103,7 +103,7 @@ What is available as a result of \`import * as namespace from "x.cjs"\`
 
 ❌ - missing  
 ☑ - own property, but falsy  
-✔️ - present and truthy  
+✔️ - truthy  
 
 ${printTable(rows)}
 

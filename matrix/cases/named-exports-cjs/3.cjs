@@ -1,4 +1,2 @@
-exports.__esModule = true;
-exports.default = {
-  even: n => n % 2 === 0
-}
+let o = Object.create({ even: n => n % 2 === 0 })
+module.exports = o;
