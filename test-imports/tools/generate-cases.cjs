@@ -67,7 +67,6 @@ async function generateFiles(basepath, cases) {
     }),
   );
 }
-
 async function generate(basepath, { overwrite }) {
   const existingCases = overwrite ? [] : await fs.readdir(basepath);
   const dependencies = Object.keys(pkgjson.dependencies);
@@ -76,12 +75,12 @@ async function generate(basepath, { overwrite }) {
     ...dependencies.map((pkg) => ({
       type: 'cjs',
       name: pkg,
-      file: `${pkg.replace(/\/@/g, '_')}.cjs`,
+      file: `${pkg.replace(/[\/@]/g, '_')}.cjs`,
     })),
     ...dependencies.map((pkg) => ({
       type: 'esm',
       name: pkg,
-      file: `${pkg.replace(/\/@/g, '_')}.mjs`,
+      file: `${pkg.replace(/[\/@]/g, '_')}.mjs`,
     })),
   ].filter((c) => !existingCases.includes(c.file));
 
@@ -101,4 +100,4 @@ generate(casesFolder, { overwrite }).then((written) => {
   console.log(`
 ${written.length} new tests generated
 ${written.sort().join('\n')}`);
-});
+}, console.error);
