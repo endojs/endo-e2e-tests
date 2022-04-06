@@ -51,3 +51,66 @@ Existing files will not be overwritten. To regenerate all cases from dependencie
 
 Each file in `test-imports/cases` is used when you run tests.  
 A test case must export `expected` and `actual` - these two will be passed to Ava's `deepEqual` assertion.
+
+
+# Known issues
+
+REJECTED cases can be solved by adding a transform.  
+Scaffolding for these tests adds a transform to avoid these.
+
+## typescript
+
+- triggers SES_HTML_COMMENT_REJECTED error from comments
+- triggers SES_IMPORT_REJECTED error from comments
+- triggers SES_IMPORT_REJECTED error from string literals in source code
+
+Import example:
+```js
+Module_0_does_not_refer_to_a_type_but_is_used_as_a_type_here_Did_you_mean_typeof_import_0: diag(1340, ts.DiagnosticCategory.Error, "Module_0_does_not_refer_to_a_type_but_is_used_as_a_type_here_Did_you_mean_typeof_import_0_1340", "Module '{0}' does not refer to a type, but is used as a type here. Did you mean 'typeof import('{0}')'?"),
+        
+```
+```js
+function getImportTypePrefix(moduleSpecifier, quotePreference) {
+    var quote = ts.getQuoteFromPreference(quotePreference);
+    return "import(".concat(quote).concat(moduleSpecifier).concat(quote, ").");
+}
+```
+
+Replacing `import(` with `import\(` in strings should work seamlessly.
+
+## node-fetch
+
+- triggers SES_IMPORT_REJECTED error from comments
+
+- a dependency attempts to extend intrinsics  
+  `Cannot add property WebStreamsPolyfill, object is not extensible node_modules/web-streams-polyfill/dist/ponyfill.es2018.js:4:113``
+
+## eslint
+
+- triggers SES_IMPORT_REJECTED error from comments
+
+- Throws `Cannot use 'import.meta' outside a module` on evaluation attempt
+- One of its dependencies attempts to use `require.resolve`
+
+## punycode 
+
+- exports different shapes for esm and cjs. Endo loads only the esm variant regardless of import/require
+## acorn
+
+- issues with loading the right file from `exports` field in package.json, nothing is exported as a result.
+
+## ethers
+
+- mjs version doesn't have a default export in Endo despite 'default' being listed in `import * as all` results
+
+## @noble/hashes
+
+- `crypto` wouldn't load
+
+## json-rpc-engine
+
+- Throws `Class extends value #<Object> is not a constructor or null` (to be investigated, has something to do with compiled typescript using `__esModule` and `default`)
+
+## redux
+
+- Throws `\'import\' and \'export\' may appear only with \'sourceType: "module"\' ` - Endo loads file from package.json->module with .js extension and fails to recognize it's esm
