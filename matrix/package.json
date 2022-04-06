@@ -12,12 +12,12 @@
     "run-endo": "node ./tools/runTests.cjs endo",
     "generate": "node ./tools/generateTable.cjs",
     "build": "npm run build:webpack && npm run build:parcel && npm run build:rollup && npm run build:esbuild && npm run build:tsc && npm run build:tscinterop",
-    "build:tsc": "tsc cases/named-exports-cjs/index.mjs --allowJs --outdir cases/named-exports-cjs/dist/tsc/ && mv cases/named-exports-cjs/dist/tsc/index.mjs cases/named-exports-cjs/dist/tsc/index.js ",
-    "build:tscinterop": "tsc cases/named-exports-cjs/index.mjs --esModuleInterop --allowJs --outdir cases/named-exports-cjs/dist/tscinterop/ && mv cases/named-exports-cjs/dist/tscinterop/index.mjs cases/named-exports-cjs/dist/tscinterop/index.js ",
-    "build:esbuild": "esbuild cases/named-exports-cjs/index.mjs  --bundle --outfile=cases/named-exports-cjs/dist/esbuild.js",
-    "build:webpack": "webpack --config cases/named-exports-cjs/webpack.config.js",
-    "build:rollup": "cd ./cases/named-exports-cjs/ && rollup  --config rollup.config.js",
-    "build:parcel": "cd ./cases/named-exports-cjs/ && parcel build --no-source-maps --no-cache"
+    "build:tsc": "tsc cases/import-cjs/index.mjs --allowJs --outdir cases/import-cjs/dist/tsc/ && mv cases/import-cjs/dist/tsc/index.mjs cases/import-cjs/dist/tsc/index.js ",
+    "build:tscinterop": "tsc cases/import-cjs/index.mjs --esModuleInterop --allowJs --outdir cases/import-cjs/dist/tscinterop/ && mv cases/import-cjs/dist/tscinterop/index.mjs cases/import-cjs/dist/tscinterop/index.js ",
+    "build:esbuild": "esbuild cases/import-cjs/index.mjs  --bundle --outfile=cases/import-cjs/dist/esbuild.js",
+    "build:webpack": "webpack --config cases/import-cjs/webpack.config.js",
+    "build:rollup": "cd ./cases/import-cjs/ && rollup  --config rollup.config.js",
+    "build:parcel": "cd ./cases/import-cjs/ && parcel build --no-source-maps --no-cache"
   },
   "keywords": [],
   "author": "",

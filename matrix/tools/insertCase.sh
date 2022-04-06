@@ -1,6 +1,6 @@
 #!/bin/bash
 
-BASE=$(dirname $0)/../cases/named-exports-cjs
+BASE=$(dirname $0)/../cases/import-cjs
 echo $BASE
 START=$(($1 + 0))
 if [ $START -gt 0 ]; then

@@ -2,7 +2,7 @@
   "name": "endo",
   "bin": "node",
   "args": [
-    "/home/naugtur/repo/endo-e2e-tests/matrix/cases/named-exports-cjs/endo.mjs"
+    "/home/naugtur/repo/endo-e2e-tests/matrix/cases/import-cjs/endo.mjs"
   ],
   "data": [
     {
@@ -129,6 +129,34 @@
       "default.even": [
         true,
         true
+      ]
+    },
+    {
+      "even": [
+        true,
+        true
+      ],
+      "default": [
+        true,
+        true
+      ],
+      "default.even": [
+        true,
+        true
+      ]
+    },
+    {
+      "even": [
+        false,
+        false
+      ],
+      "default": [
+        true,
+        true
+      ],
+      "default.even": [
+        false,
+        false
       ]
     },
     {
