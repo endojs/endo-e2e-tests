@@ -1,6 +1,7 @@
 
 const all = require('is-array');
 let def;
+exports.name = 'is-array';
 exports.expected = {"*":{"type":"function","keys":[]},"default":{"type":"undefined","keys":[]}};
 exports.actual = { 
     '*': { type: typeof all, keys: Object.keys(all || {}).filter(a=>a).sort() },

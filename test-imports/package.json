@@ -47,6 +47,9 @@
     "files": [
       "./test-*"
     ],
-    "timeout": "2m"
+    "timeout": "2m",
+    "nodeArguments": [
+			"--experimental-import-meta-resolve"
+    ]
   }
 }
