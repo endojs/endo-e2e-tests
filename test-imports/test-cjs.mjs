@@ -12,5 +12,5 @@ const { testPackages } = scaffold({
 });
 testPackages({
   ext: 'cjs',
-  // only: 'eslint.cjs'
+  // only: 'redux.cjs'
 });

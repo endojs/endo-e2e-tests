@@ -58,6 +58,34 @@ export function scaffold({
           const namespace = await import(pkg);
           return t.deepEqual(namespace.actual, namespace.expected);
         });
+        test(`[⬢=▣] ${testCase}    import resolution matches`, async (t) => {
+          t.plan(1);
+
+          let endoPath;
+
+          const { namespace } = await importLocation(
+            async (location) => {
+              if (
+                !endoPath &&
+                location.slice(-12) !== 'package.json' &&
+                !location.includes('/test-imports/cases/')
+              ) {
+                // capture first import location of a test case
+                endoPath = location;
+              }
+              return read(location);
+            },
+            pkg,
+            {
+              globals,
+              modules,
+              moduleTransforms,
+            },
+          );
+          // note import.meta.resolve requires running node with --experimental-import-meta-resolve
+          const nodePath = await import.meta.resolve(namespace.name);
+          t.is(nodePath, endoPath);
+        });
         test(`[▣ i] ${testCase}    Endo can import`, async (t) => {
           t.plan(1);
 
@@ -78,7 +106,10 @@ export function scaffold({
             modules,
             moduleTransforms,
           });
-          if (!strictMatchingExports && namespace.expected['*'].type === 'object') {
+          if (
+            !strictMatchingExports &&
+            namespace.expected['*'].type === 'object'
+          ) {
             // It's ok to import more than node.js does
             const missingKeys = namespace.expected['*'].keys.filter(
               (missingKey) => !namespace.actual['*'].keys.includes(missingKey),
@@ -99,6 +130,9 @@ export function scaffold({
             modules,
             moduleTransforms,
           });
+          if (!namespace.expected.default) {
+            return t.is.skip();
+          }
           if (!strictMatchingExports) {
             namespace.actual.default.keys =
               namespace.actual.default.keys.filter((n) => n !== '__esModule');

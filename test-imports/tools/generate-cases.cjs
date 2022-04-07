@@ -16,24 +16,28 @@ const templates = {};
 templates['cjs-default-true'] = ({ name, expected }) => `
 const all = require('${name}');
 const def = all.default;
+exports.name = '${name}';
 exports.expected = ${expected};
 exports.actual = ${packageSignatureCode}
 `;
 templates['cjs-default-false'] = ({ name, expected }) => `
 const all = require('${name}');
 let def;
+exports.name = '${name}';
 exports.expected = ${expected};
 exports.actual = ${packageSignatureCode}
 `;
 templates['esm-default-true'] = ({ name, expected }) => `
 import * as all from '${name}';
 import def from '${name}';
+export const name = '${name}';
 export const expected = ${expected};
 export const actual = ${packageSignatureCode}
 `;
 templates['esm-default-false'] = ({ name, expected }) => `
 import * as all from '${name}';
 let def;
+export const name = '${name}';
 export const expected = ${expected};
 export const actual = ${packageSignatureCode}
 `;
