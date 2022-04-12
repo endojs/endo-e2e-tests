@@ -6,9 +6,9 @@ What is available as a result of `import * as namespace from "x.cjs"`
 
 ❌ - missing  
 ☑ - own property, but falsy  
-✔️ - present and truthy  
+✔️ - truthy  
 
-|  | endo | node-v12.17 | node-v12.22 | node-v16 | esbuild | parcel | rollup | tsc | tscInterop | webpack |
+|  | **endo** | **node-v12** | **node-v12** | **node-v16** | **esbuild** | **parcel** | **rollup** | **tsc** | **tscInterop** | **webpack** |
 |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |
 | [1.cjs](#file-1cjs) even | ✔️ | ❌ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ |
 | [1.cjs](#file-1cjs) default | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ❌ | ✔️ | ❌ | ✔️ | ✔️ |
@@ -16,12 +16,12 @@ What is available as a result of `import * as namespace from "x.cjs"`
 | [2.cjs](#file-2cjs) even | ✔️ | ❌ | ❌ | ❌ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ |
 | [2.cjs](#file-2cjs) default | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ❌ | ✔️ | ❌ | ✔️ | ✔️ |
 | [2.cjs](#file-2cjs) default.even | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ❌ | ✔️ | ❌ | ✔️ | ✔️ |
-| [3.cjs](#file-3cjs) even | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
-| [3.cjs](#file-3cjs) default | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ |
-| [3.cjs](#file-3cjs) default.even | ❌ | ❌ | ❌ | ❌ | ❌ | ✔️ | ✔️ | ✔️ | ✔️ | ❌ |
-| [4.cjs](#file-4cjs) even | ✔️ | ❌ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ |
-| [4.cjs](#file-4cjs) default | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ |
-| [4.cjs](#file-4cjs) default.even | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ |
+| [3.cjs](#file-3cjs) even | ❌ | ❌ | ❌ | ❌ | ✔️ | ✔️ | ❌ | ✔️ | ❌ | ✔️ |
+| [3.cjs](#file-3cjs) default | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ❌ | ✔️ | ❌ | ✔️ | ✔️ |
+| [3.cjs](#file-3cjs) default.even | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ❌ | ✔️ | ❌ | ✔️ | ✔️ |
+| [4.cjs](#file-4cjs) even | ✔️ | ❌ | ❌ | ❌ | ✔️ | ✔️ | ❌ | ✔️ | ❌ | ✔️ |
+| [4.cjs](#file-4cjs) default | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ❌ | ✔️ | ❌ | ✔️ | ✔️ |
+| [4.cjs](#file-4cjs) default.even | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ❌ | ✔️ | ❌ | ✔️ | ✔️ |
 | [5.cjs](#file-5cjs) even | ✔️ | ❌ | ❌ | ❌ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ |
 | [5.cjs](#file-5cjs) default | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ❌ | ✔️ | ❌ | ✔️ | ✔️ |
 | [5.cjs](#file-5cjs) default.even | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ❌ | ✔️ | ❌ | ✔️ | ✔️ |
@@ -40,6 +40,17 @@ What is available as a result of `import * as namespace from "x.cjs"`
 | [10.cjs](#file-10cjs) even | ✔️ | ❌ | ❌ | ❌ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ |
 | [10.cjs](#file-10cjs) default | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ❌ | ✔️ | ❌ | ✔️ | ✔️ |
 | [10.cjs](#file-10cjs) default.even | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ❌ | ✔️ | ❌ | ✔️ | ✔️ |
+| [11.cjs](#file-11cjs) even | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| [11.cjs](#file-11cjs) default | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ |
+| [11.cjs](#file-11cjs) default.even | ❌ | ❌ | ❌ | ❌ | ❌ | ✔️ | ✔️ | ✔️ | ✔️ | ❌ |
+| [12.cjs](#file-12cjs) even | ✔️ | ❌ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ |
+| [12.cjs](#file-12cjs) default | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ❌ | ✔️ | ❌ | ❌ | ✔️ |
+| [12.cjs](#file-12cjs) default.even | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ❌ | ✔️ | ❌ | ❌ | ✔️ |
+|  | **endo** | **node-v12** | **node-v12** | **node-v16** | **esbuild** | **parcel** | **rollup** | **tsc** | **tscInterop** | **webpack** |
+
+## Matching results
+
+ - 2,5,10
 
 # Cases
 
@@ -62,20 +73,17 @@ module.exports = {
 
 ### file 3.cjs
 ```js
-exports.__esModule = true;
-exports.default = {
-  even: n => n % 2 === 0
-}
+let o = Object.create({ even: n => n % 2 === 0 })
+module.exports = o;
 ```
 
 
 ### file 4.cjs
 ```js
-exports.__esModule = true;
-exports.even = n => n % 2 === 0;
-exports.default = {
-  even: n => n % 2 === 0
-}
+Object.defineProperty(exports, 'even', {
+  enumerable: false,
+  value: n => n % 2 === 0
+})
 ```
 
 
@@ -162,6 +170,23 @@ defineThingy('even')
 ```
 
 
+### file 11.cjs
+```js
+exports.__esModule = true;
+exports.default = {
+  even: n => n % 2 === 0
+};
+```
+
+
+### file 12.cjs
+```js
+// should be exactly the same as 9
+exports.__esModule = true;
+exports.even = n => n % 2 === 0
+```
+
+
 
 
 ----
@@ -173,7 +198,7 @@ defineThingy('even')
 tr:nth-child(3n+1){
   border-top:2px solid #333 !important;
 }
-td:nth-child(n+6){
+td:nth-child(n+1){
   background-color: #eee !important;
 }
 </style>

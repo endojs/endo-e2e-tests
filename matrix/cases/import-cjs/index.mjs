@@ -8,10 +8,13 @@ import * as ns_7 from './7.cjs';
 import * as ns_8 from './8.cjs';
 import * as ns_9 from './9.cjs';
 import * as ns_10 from './10.cjs';
+import * as ns_11 from './11.cjs';
+import * as ns_12 from './12.cjs';
 
-export const results = [ns_1, ns_2, ns_3, ns_4, ns_5, ns_6,ns_7,ns_8,ns_9,ns_10];
+export const results = [ns_1, ns_2, ns_3, ns_4, ns_5, ns_6,ns_7,ns_8,ns_9,ns_10,ns_11,ns_12];
 const has = (obj,key) => Object.prototype.hasOwnProperty.call(obj,key)
 const checks = {
+    // '__esModule': (ns) => [has(ns, '__esModule'),!!ns.__esModule],
     'even': (ns) => [has(ns, 'even'),!!ns.even],
     'default': (ns) => [has(ns, 'default'),!!ns.default],
     'default.even': (ns) => [!!(ns && ns.default && has(ns.default, 'even')),!!(ns && ns.default && ns.default.even)],

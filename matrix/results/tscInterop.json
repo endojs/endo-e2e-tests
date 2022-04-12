@@ -2,7 +2,7 @@
   "name": "tscInterop",
   "bin": "node",
   "args": [
-    "/home/naugtur/repo/endo-e2e-tests/matrix/cases/named-exports-cjs/dist/tscinterop/index.js"
+    "/home/naugtur/repo/endo-e2e-tests/matrix/cases/import-cjs/dist/tscinterop/index.js"
   ],
   "data": [
     {
@@ -43,14 +43,14 @@
         true
       ],
       "default.even": [
-        true,
+        false,
         true
       ]
     },
     {
       "even": [
-        true,
-        true
+        false,
+        false
       ],
       "default": [
         true,
@@ -143,6 +143,34 @@
       "default.even": [
         true,
         true
+      ]
+    },
+    {
+      "even": [
+        false,
+        false
+      ],
+      "default": [
+        true,
+        true
+      ],
+      "default.even": [
+        true,
+        true
+      ]
+    },
+    {
+      "even": [
+        true,
+        true
+      ],
+      "default": [
+        false,
+        false
+      ],
+      "default.even": [
+        false,
+        false
       ]
     }
   ]

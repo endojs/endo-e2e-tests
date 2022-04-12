@@ -2,7 +2,7 @@
   "name": "rollup",
   "bin": "node",
   "args": [
-    "/home/naugtur/repo/endo-e2e-tests/matrix/cases/named-exports-cjs/dist/rollup.js"
+    "/home/naugtur/repo/endo-e2e-tests/matrix/cases/import-cjs/dist/rollup.js"
   ],
   "data": [
     {
@@ -43,14 +43,14 @@
         true
       ],
       "default.even": [
-        true,
+        false,
         true
       ]
     },
     {
       "even": [
-        true,
-        true
+        false,
+        false
       ],
       "default": [
         true,
@@ -121,6 +121,34 @@
       "even": [
         true,
         true
+      ],
+      "default": [
+        true,
+        true
+      ],
+      "default.even": [
+        true,
+        true
+      ]
+    },
+    {
+      "even": [
+        true,
+        true
+      ],
+      "default": [
+        true,
+        true
+      ],
+      "default.even": [
+        true,
+        true
+      ]
+    },
+    {
+      "even": [
+        false,
+        false
       ],
       "default": [
         true,

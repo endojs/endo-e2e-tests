@@ -2,7 +2,7 @@
   "name": "webpack",
   "bin": "node",
   "args": [
-    "/home/naugtur/repo/endo-e2e-tests/matrix/cases/named-exports-cjs/dist/webpack.js"
+    "/home/naugtur/repo/endo-e2e-tests/matrix/cases/import-cjs/dist/webpack.js"
   ],
   "data": [
     {
@@ -35,6 +35,62 @@
     },
     {
       "even": [
+        true,
+        true
+      ],
+      "default": [
+        true,
+        true
+      ],
+      "default.even": [
+        false,
+        true
+      ]
+    },
+    {
+      "even": [
+        true,
+        true
+      ],
+      "default": [
+        true,
+        true
+      ],
+      "default.even": [
+        true,
+        true
+      ]
+    },
+    {
+      "even": [
+        true,
+        true
+      ],
+      "default": [
+        true,
+        true
+      ],
+      "default.even": [
+        true,
+        true
+      ]
+    },
+    {
+      "even": [
+        false,
+        false
+      ],
+      "default": [
+        true,
+        true
+      ],
+      "default.even": [
+        true,
+        true
+      ]
+    },
+    {
+      "even": [
         false,
         false
       ],
@@ -77,34 +133,6 @@
     },
     {
       "even": [
-        false,
-        false
-      ],
-      "default": [
-        true,
-        true
-      ],
-      "default.even": [
-        true,
-        true
-      ]
-    },
-    {
-      "even": [
-        false,
-        false
-      ],
-      "default": [
-        true,
-        true
-      ],
-      "default.even": [
-        false,
-        false
-      ]
-    },
-    {
-      "even": [
         true,
         true
       ],
@@ -119,16 +147,16 @@
     },
     {
       "even": [
-        true,
-        true
+        false,
+        false
       ],
       "default": [
         true,
         true
       ],
       "default.even": [
-        true,
-        true
+        false,
+        false
       ]
     },
     {

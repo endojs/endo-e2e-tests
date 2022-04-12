@@ -2,7 +2,7 @@
 const path = require('path');
 const { readFileSync, readdirSync, writeFileSync } = require('fs');
 
-const CASE_PATH = path.resolve(__dirname, '../cases/named-exports-cjs');
+const CASE_PATH = path.resolve(__dirname, '../cases/import-cjs');
 const RESULT_PATH = path.resolve(__dirname, '../results');
 const TABLE_FILE = path.resolve(__dirname, '../table.md');
 
@@ -18,9 +18,33 @@ function listResultsFor(results, { num, key }) {
   });
 }
 
+function findEquivalents(results) {
+  let reindex = [];
+  let matches = {};
+  results.forEach((result) => {
+    result.data.forEach(
+      (caseResult, caseIndex) =>
+        (reindex[caseIndex] = [].concat(
+          reindex[caseIndex],
+          Object.entries(caseResult).flat().flat(),
+        )),
+    );
+  });
+  reindex
+    .map((i) => i.join())
+    .forEach((key, i) => {
+      if (!matches[key]) {
+        matches[key] = [];
+      }
+      matches[key].push(i + 1);
+    });
+  return Object.values(matches).filter((m) => m.length > 1);
+}
+
 const TICKS = '```';
 const printMissing = () => '?';
-const printBooleans = ([x, y]) => (x ? (y ? '✔️' : '☑') : '❌');
+const printBooleans = ([own, truthy] = []) =>
+  truthy ? '✔️' : own ? '☑' : '❌';
 const printError = (name) => `[💥](#${name}-error)`;
 function printTable(rows) {
   return rows.map((row) => `| ${row.join(' | ')} |`).join('\n');
@@ -44,7 +68,7 @@ function printErrors(results) {
       (r) => `
 ### ${r.name} error
 ${TICKS}
-${r.error.message.replace(/file:\/\/.*\//g, '')}
+${r.error?.message?.replace(/file:\/\/.*\//g, '')}
 ${TICKS}   
 `,
     );
@@ -83,7 +107,7 @@ Promise.all(
   const rowsList = dataPrototype.flatMap((item, num) =>
     Object.keys(item).map((key) => ({ num, key })),
   );
-  const header = ['', ...results.map((r) => r.name)];
+  const header = ['', ...results.map((r) => `**${r.name}**`)];
   const bundlersStartAt =
     header.map((n) => n.substring(0, 4)).lastIndexOf('node') + 2;
   const divider = header.map((_) => ' --- ');
@@ -91,7 +115,10 @@ Promise.all(
     header,
     divider,
     ...rowsList.map((row) => [printCase(row), ...listResultsFor(results, row)]),
+    header,
   ];
+
+  const equivalents = findEquivalents(results);
 
   writeFileSync(
     TABLE_FILE,
@@ -103,9 +130,12 @@ What is available as a result of \`import * as namespace from "x.cjs"\`
 
 ❌ - missing  
 ☑ - own property, but falsy  
-✔️ - present and truthy  
+✔️ - truthy  
 
 ${printTable(rows)}
+
+## Matching results
+${equivalents.map((e) => '\n - ' + e)}
 
 # Cases
 ${printFiles(cjsFileList)}

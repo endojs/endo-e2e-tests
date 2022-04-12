@@ -4,7 +4,7 @@ const { execFile } = require('child_process');
 const { writeFileSync } = require('fs');
 const path = require('path');
 
-const CASE_PATH = path.resolve(__dirname, '../cases/named-exports-cjs');
+const CASE_PATH = path.resolve(__dirname, '../cases/import-cjs');
 const RESULT_PATH = path.resolve(__dirname, '../results');
 
 const engines = {

@@ -2,7 +2,7 @@
   "name": "parcel",
   "bin": "node",
   "args": [
-    "/home/naugtur/repo/endo-e2e-tests/matrix/cases/named-exports-cjs/dist/parcel.js"
+    "/home/naugtur/repo/endo-e2e-tests/matrix/cases/import-cjs/dist/parcel.js"
   ],
   "data": [
     {
@@ -36,29 +36,15 @@
     {
       "even": [
         false,
+        true
+      ],
+      "default": [
+        false,
         false
       ],
-      "default": [
-        true,
-        true
-      ],
       "default.even": [
-        true,
-        true
-      ]
-    },
-    {
-      "even": [
-        true,
-        true
-      ],
-      "default": [
-        true,
-        true
-      ],
-      "default.even": [
-        true,
-        true
+        false,
+        false
       ]
     },
     {
@@ -81,6 +67,20 @@
         true
       ],
       "default": [
+        false,
+        false
+      ],
+      "default.even": [
+        false,
+        false
+      ]
+    },
+    {
+      "even": [
+        true,
+        true
+      ],
+      "default": [
         true,
         true
       ],
@@ -129,6 +129,34 @@
       "default.even": [
         false,
         false
+      ]
+    },
+    {
+      "even": [
+        true,
+        true
+      ],
+      "default": [
+        false,
+        false
+      ],
+      "default.even": [
+        false,
+        false
+      ]
+    },
+    {
+      "even": [
+        false,
+        false
+      ],
+      "default": [
+        true,
+        true
+      ],
+      "default.even": [
+        true,
+        true
       ]
     },
     {

@@ -2,7 +2,7 @@
   "name": "esbuild",
   "bin": "node",
   "args": [
-    "/home/naugtur/repo/endo-e2e-tests/matrix/cases/named-exports-cjs/dist/esbuild.js"
+    "/home/naugtur/repo/endo-e2e-tests/matrix/cases/import-cjs/dist/esbuild.js"
   ],
   "data": [
     {
@@ -36,6 +36,62 @@
     {
       "even": [
         false,
+        true
+      ],
+      "default": [
+        true,
+        true
+      ],
+      "default.even": [
+        false,
+        true
+      ]
+    },
+    {
+      "even": [
+        true,
+        true
+      ],
+      "default": [
+        true,
+        true
+      ],
+      "default.even": [
+        true,
+        true
+      ]
+    },
+    {
+      "even": [
+        true,
+        true
+      ],
+      "default": [
+        true,
+        true
+      ],
+      "default.even": [
+        true,
+        true
+      ]
+    },
+    {
+      "even": [
+        true,
+        true
+      ],
+      "default": [
+        true,
+        true
+      ],
+      "default.even": [
+        true,
+        true
+      ]
+    },
+    {
+      "even": [
+        false,
         false
       ],
       "default": [
@@ -101,34 +157,6 @@
       "default.even": [
         false,
         false
-      ]
-    },
-    {
-      "even": [
-        true,
-        true
-      ],
-      "default": [
-        true,
-        true
-      ],
-      "default.even": [
-        true,
-        true
-      ]
-    },
-    {
-      "even": [
-        true,
-        true
-      ],
-      "default": [
-        true,
-        true
-      ],
-      "default.even": [
-        true,
-        true
       ]
     },
     {

@@ -1,8 +1,8 @@
 {
-  "name": "node-v12.17",
+  "name": "node-v12",
   "bin": "node",
   "args": [
-    "/home/naugtur/repo/endo-e2e-tests/matrix/cases/named-exports-cjs/index.mjs"
+    "/home/naugtur/repo/endo-e2e-tests/matrix/cases/import-cjs/index.mjs"
   ],
   "data": [
     {
@@ -44,6 +44,62 @@
       ],
       "default.even": [
         false,
+        true
+      ]
+    },
+    {
+      "even": [
+        false,
+        false
+      ],
+      "default": [
+        true,
+        true
+      ],
+      "default.even": [
+        true,
+        true
+      ]
+    },
+    {
+      "even": [
+        false,
+        false
+      ],
+      "default": [
+        true,
+        true
+      ],
+      "default.even": [
+        true,
+        true
+      ]
+    },
+    {
+      "even": [
+        false,
+        false
+      ],
+      "default": [
+        true,
+        true
+      ],
+      "default.even": [
+        true,
+        true
+      ]
+    },
+    {
+      "even": [
+        false,
+        false
+      ],
+      "default": [
+        true,
+        true
+      ],
+      "default.even": [
+        false,
         false
       ]
     },
@@ -101,34 +157,6 @@
       "default.even": [
         false,
         false
-      ]
-    },
-    {
-      "even": [
-        false,
-        false
-      ],
-      "default": [
-        true,
-        true
-      ],
-      "default.even": [
-        true,
-        true
-      ]
-    },
-    {
-      "even": [
-        false,
-        false
-      ],
-      "default": [
-        true,
-        true
-      ],
-      "default.even": [
-        true,
-        true
       ]
     },
     {
