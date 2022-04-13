@@ -12,5 +12,5 @@ const { testPackages } = scaffold({
 });
 testPackages({
   ext: 'cjs',
-  // only: 'redux.cjs'
+  only: 'browserify.cjs'
 });
