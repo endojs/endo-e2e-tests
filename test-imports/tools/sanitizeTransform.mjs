@@ -35,6 +35,7 @@ function transformAst(ast) {
 export function transformSource(code, { sourceType } = {}) {
   const ast = parseBabel(code, {
     sourceType,
+    allowReturnOutsideFunction: true
   });
 
   transformAst(ast);

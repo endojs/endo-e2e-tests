@@ -15,6 +15,7 @@
     "axios": "0.26.1",
     "bignumber.js": "9.0.2",
     "browser-resolve": "2.0.0",
+    "browserify": "16.5.2",
     "elliptic": "^6.5.4",
     "eslint": "8.11.0",
     "ethereumjs-util": "7.1.0",
@@ -49,7 +50,7 @@
     ],
     "timeout": "2m",
     "nodeArguments": [
-			"--experimental-import-meta-resolve"
+      "--experimental-import-meta-resolve"
     ]
   }
 }
