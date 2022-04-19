@@ -18,6 +18,48 @@ const moduleTransforms = {
   mjs: importsTransform('module', 'mjs'),
   cjs: importsTransform('script', 'cjs'),
 };
+const coreModuleNames = [
+  'node:assert',
+  'assert',
+  'node:fs',
+  'fs',
+  'node:path',
+  'path',
+  'node:os',
+  'os',
+  'node:util',
+  'util',
+  'node:buffer',
+  'buffer',
+  'node:crypto',
+  'crypto',
+  'node:events',
+  'events',
+  'node:stream',
+  'stream',
+  'readable-stream',
+  'inherits',
+  'node:http',
+  'http',
+  'node:https',
+  'https',
+  'node:zlib',
+  'zlib',
+  'node:url',
+  'url',
+  'node:net',
+  'net',
+  'node:module',
+  'module',
+  'node:tty',
+  'tty',
+  'node:constants',
+  'constants',
+  'node:querystring',
+  'querystring',
+  'node:string_decoder',
+  'string_decoder',
+];
 
 const CASES = '../cases/';
 export function scaffold({
@@ -28,7 +70,7 @@ export function scaffold({
 }) {
   return {
     async testPackages({ ext, only = null }) {
-      const coreModules = await getModules(importLocation);
+      const coreModules = await getModules(coreModuleNames);
       modules = Object.assign({}, coreModules, modules);
 
       globals = Object.assign(

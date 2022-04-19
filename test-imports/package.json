@@ -18,6 +18,7 @@
     "browserify": "16.5.2",
     "elliptic": "^6.5.4",
     "eslint": "8.11.0",
+    "ethereumjs-common": "1.5.2",
     "ethereumjs-util": "7.1.0",
     "ethers": "5.6.2",
     "is-array": "1.0.1",

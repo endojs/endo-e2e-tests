@@ -1,49 +1,45 @@
+export const getModules = async (moduleNames) => {
+  const realModules = {};
 
-export const getModules = async (importLocation) => {
-  const readName = (name, namedExportKeys) => async (s) => {
-    if (s === 'file:///whatever.cjs') {
-      const exporters = namedExportKeys.map(k => `exports.${k} = a;`).join('');
-      return Buffer.from(`var a;${exporters}
-        module.exports = globalThis.leak`);
-    } else {
-      return Buffer.from(`{"name":"${name}"}`);
+  const coreModulesCompartment = new Compartment(
+    {},
+    {},
+    {
+      name: 'coreModules',
+      resolveHook: (moduleSpecifier) => {
+        return moduleSpecifier;
+      },
+      importHook: async (moduleSpecifier) => {
+        const ns =
+          realModules[moduleSpecifier].default || realModules[moduleSpecifier];
+
+        const staticModuleRecord = Object.freeze({
+          imports: [],
+          exports: Object.keys(ns),
+          execute: (moduleExports) => {
+            Object.assign(moduleExports, ns);
+            moduleExports.default = ns;
+          },
+        });
+        return staticModuleRecord;
+      },
+    },
+  );
+
+  for (let name of moduleNames) {
+    try {
+      realModules[name] = await import(name);
+    } catch (e) {
+      console.warn(e);
     }
-  };
-
-  const modules = {};
-  for (let name of [
-    'assert',
-    'fs',
-    'path',
-    'os',
-    'util',
-    'buffer',
-    'crypto',
-    'events',
-    'stream',
-    'readable-stream',
-    'inherits',
-    'http',
-    'https',
-    'zlib',
-    'url',
-    'net',
-    'module',
-    'tty',
-    'constants',
-    'querystring',
-    'string_decoder',
-  ]) {
-    const ns = await import(name);
-    const namedExportKeys = Object.keys(ns);
-    const mod = (
-      await importLocation(readName(name, namedExportKeys), 'file:///whatever.cjs', {
-        globals: { leak: ns.default || ns },
-      })
-    ).namespace;
-    modules[name] = mod;
-    modules['node:' + name] = mod;
   }
 
-  return modules;
-}
+  return Object.fromEntries(
+    await Promise.all(
+      Object.keys(realModules).map(async (name) => [
+        name,
+        (await coreModulesCompartment.import(name)).namespace,
+      ]),
+    ),
+  );
+};
