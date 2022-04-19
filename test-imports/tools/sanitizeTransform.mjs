@@ -10,7 +10,6 @@ function rewriteComment(node) {
   node.type = 'CommentBlock';
   // For the test purposes, instead of sanitizing comments, let's simply make them empty
   node.value = '';
-
 }
 function transformAst(ast) {
   (babelTraverse.default || babelTraverse)(ast, {
@@ -35,7 +34,7 @@ function transformAst(ast) {
 export function transformSource(code, { sourceType } = {}) {
   const ast = parseBabel(code, {
     sourceType,
-    allowReturnOutsideFunction: true
+    allowReturnOutsideFunction: true,
   });
 
   transformAst(ast);

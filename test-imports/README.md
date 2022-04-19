@@ -52,7 +52,6 @@ Existing files will not be overwritten. To regenerate all cases from dependencie
 Each file in `test-imports/cases` is used when you run tests.  
 A test case must export `expected` and `actual` - these two will be passed to Ava's `deepEqual` assertion.
 
-
 # Known issues
 
 REJECTED cases can be solved by adding a transform.  
@@ -65,14 +64,16 @@ Scaffolding for these tests adds a transform to avoid these.
 - triggers SES_IMPORT_REJECTED error from string literals in source code
 
 Import example:
+
 ```js
 Module_0_does_not_refer_to_a_type_but_is_used_as_a_type_here_Did_you_mean_typeof_import_0: diag(1340, ts.DiagnosticCategory.Error, "Module_0_does_not_refer_to_a_type_but_is_used_as_a_type_here_Did_you_mean_typeof_import_0_1340", "Module '{0}' does not refer to a type, but is used as a type here. Did you mean 'typeof import('{0}')'?"),
-        
+
 ```
+
 ```js
 function getImportTypePrefix(moduleSpecifier, quotePreference) {
-    var quote = ts.getQuoteFromPreference(quotePreference);
-    return "import(".concat(quote).concat(moduleSpecifier).concat(quote, ").");
+  var quote = ts.getQuoteFromPreference(quotePreference);
+  return 'import('.concat(quote).concat(moduleSpecifier).concat(quote, ').');
 }
 ```
 
@@ -92,9 +93,10 @@ Replacing `import(` with `import\(` in strings should work seamlessly.
 - Throws `Cannot use 'import.meta' outside a module` on evaluation attempt
 - One of its dependencies attempts to use `require.resolve`
 
-## punycode 
+## punycode
 
 - exports different shapes for esm and cjs. Endo loads only the esm variant regardless of import/require
+
 ## acorn
 
 - issues with loading the right file from `exports` field in package.json, nothing is exported as a result.
