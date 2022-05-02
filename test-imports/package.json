@@ -9,6 +9,7 @@
     "generate-cases": "node ./tools/generate-cases.cjs"
   },
   "dependencies": {
+    "@babel/types": "^7.17.0",
     "@ethersproject/random": "5.6.0",
     "@noble/hashes": "1.0.0",
     "acorn": "8.7.0",
