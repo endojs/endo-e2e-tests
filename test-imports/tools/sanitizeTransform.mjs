@@ -1,6 +1,7 @@
 import * as babelParser from '@babel/parser';
 import babelGenerate from '@agoric/babel-generator';
 import babelTraverse from '@babel/traverse';
+import * as t from '@babel/types';
 
 const parseBabel = babelParser.default
   ? babelParser.default.parse
@@ -16,11 +17,29 @@ function transformAst(ast) {
     enter(p) {
       const { comments, leadingComments, innerComments, trailingComments } =
         p.node;
+      // Let modules use the tamed eval
+      if (
+        p.node.name === 'eval' &&
+        !(
+          p.parentPath.isSequenceExpression() ||
+          p.parentPath.isObjectExpression()
+        )
+      ) {
+        try {
+          p.replaceWith(
+            t.sequenceExpression([t.numericLiteral(0), t.identifier('eval')]),
+          );
+        } catch (e) {
+          // console.error(e)
+          // errors happen here if a node happens to be called eval but is not eval. eg { eval: 1 }
+        }
+      }
+      // Defuse import statement triggers in string literals without affecting the resulting string
       if (p.node.type === 'StringLiteral') {
         p.node.value = p.node.value.replace(/import\(/g, 'import\\(');
       }
-      (comments || []).forEach((node) => rewriteComment(node));
       // Rewrite all comments.
+      (comments || []).forEach((node) => rewriteComment(node));
       (leadingComments || []).forEach((node) => rewriteComment(node));
       if (p.node.type.startsWith('Comment')) {
         rewriteComment(p.node);

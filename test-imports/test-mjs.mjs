@@ -12,5 +12,5 @@ const { testPackages } = scaffold({
 });
 testPackages({
   ext: 'mjs',
-  // only: 'web3-eth.mjs'
+  only: 'eslint.mjs',
 });
