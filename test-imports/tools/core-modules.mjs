@@ -15,7 +15,7 @@ export const getModules = async (moduleNames) => {
 
         const staticModuleRecord = Object.freeze({
           imports: [],
-          exports: Object.keys(ns),
+          exports: Array.from(new Set(Object.keys(ns).concat(['default']))),
           execute: (moduleExports) => {
             Object.assign(moduleExports, ns);
             moduleExports.default = ns;

@@ -12,5 +12,5 @@ const { testPackages } = scaffold({
 });
 testPackages({
   ext: 'mjs',
-  only: 'eslint.mjs',
+  // only: '_babel_types.mjs',
 });
