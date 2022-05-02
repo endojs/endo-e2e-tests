@@ -116,3 +116,11 @@ Replacing `import(` with `import\(` in strings should work seamlessly.
 ## redux
 
 - Throws `\'import\' and \'export\' may appear only with \'sourceType: "module"\' ` - Endo loads file from package.json->module with .js extension and fails to recognize it's esm
+
+## css-loader
+
+- Seems like \_\_esModules - there seems to be a failure when loading node_modules/css-loader/dist/plugins/index.js in their index
+
+## @babel/types
+
+- getters are used to export fields based on a field from a variable that's still undefined. Support for this would require not calling the getters but wiring them up to the static module record's exports proxy.
