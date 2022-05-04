@@ -54,8 +54,8 @@ A test case must export `expected` and `actual` - these two will be passed to Av
 
 # Known issues
 
-REJECTED cases can be solved by adding a transform.  
-Scaffolding for these tests adds a transform to avoid these.
+REJECTED cases can be solved by adding a transform. I'm not listing all cases of rejections because there's just too many
+Scaffolding for these tests adds a transform to avoid the most common ones.
 
 ## typescript
 
@@ -81,46 +81,32 @@ Replacing `import(` with `import\(` in strings should work seamlessly.
 
 ## node-fetch
 
-- triggers SES_IMPORT_REJECTED error from comments
-
 - a dependency attempts to extend intrinsics  
   `Cannot add property WebStreamsPolyfill, object is not extensible node_modules/web-streams-polyfill/dist/ponyfill.es2018.js:4:113``
 
 ## eslint
 
-- triggers SES_IMPORT_REJECTED error from comments
+- triggers SES_IMPORT_REJECTED error from comments (addressed by the transforms)
 
 - Throws `Cannot use 'import.meta' outside a module` on evaluation attempt
 - One of its dependencies attempts to use `require.resolve`
 
 ## punycode
 
-- exports different shapes for esm and cjs. Endo loads only the esm variant regardless of import/require
+- exports different shapes for esm and cjs. Endo loads only the esm variant regardless of import/require.
 
 ## acorn
 
 - issues with loading the right file from `exports` field in package.json, nothing is exported as a result.
 
-## ethers
-
-- mjs version doesn't have a default export in Endo despite 'default' being listed in `import * as all` results
-
 ## @noble/hashes
 
-- `crypto` wouldn't load
+- `./crypto` wouldn't load. Not sure why.
 
 ## json-rpc-engine
 
-- Throws `Class extends value #<Object> is not a constructor or null` (to be investigated, has something to do with compiled typescript using `__esModule` and `default`)
-
-## redux
-
-- Throws `\'import\' and \'export\' may appear only with \'sourceType: "module"\' ` - Endo loads file from package.json->module with .js extension and fails to recognize it's esm
+- Minor discrepancies in exported fields availability.
 
 ## css-loader
 
-- Seems like \_\_esModules - there seems to be a failure when loading node_modules/css-loader/dist/plugins/index.js in their index
-
-## @babel/types
-
-- getters are used to export fields based on a field from a variable that's still undefined. Support for this would require not calling the getters but wiring them up to the static module record's exports proxy.
+- css-loader/dist/plugins/postcss-import-parser.js:158 - a method named `import()` - needs stronger evasion
