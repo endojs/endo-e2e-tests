@@ -2,6 +2,7 @@ import test from 'ava';
 import fs from 'fs';
 import { transformSource } from './sanitizeTransform.mjs';
 import { getModules } from './core-modules.mjs';
+import url from 'url';
 
 function localUrl(path) {
   return new URL(path, import.meta.url).toString();
@@ -79,6 +80,15 @@ export function scaffold({
         globals,
       );
 
+      const read = async (location) =>
+        fs.promises.readFile(new URL(location).pathname);
+
+      const readPowers = {
+        read,
+        fileURLToPath: url.fileURLToPath, // required for __dirname support in endo
+        canonical: async (p) => p,
+      };
+
       let cases = fs.readdirSync(localUrl(CASES).replace('file://', ''));
       if (only) {
         if (!cases.includes(only)) {
@@ -91,8 +101,6 @@ export function scaffold({
       }
 
       cases.forEach((testCase) => {
-        const read = async (location) =>
-          fs.promises.readFile(new URL(location).pathname);
         const pkg = localUrl(`${CASES}${testCase}`);
         test(`[⬢ _] ${testCase}    Node.js baseline`, async (t) => {
           t.plan(1);
@@ -106,16 +114,19 @@ export function scaffold({
           let endoPath;
 
           const { namespace } = await importLocation(
-            async (location) => {
-              if (
-                !endoPath &&
-                location.slice(-12) !== 'package.json' &&
-                !location.includes('/test-imports/cases/')
-              ) {
-                // capture first import location of a test case
-                endoPath = location;
-              }
-              return read(location);
+            {
+              ...readPowers,
+              read: async (location) => {
+                if (
+                  !endoPath &&
+                  location.slice(-12) !== 'package.json' &&
+                  !location.includes('/test-imports/cases/')
+                ) {
+                  // capture first import location of a test case
+                  endoPath = location;
+                }
+                return read(location);
+              },
             },
             pkg,
             {
@@ -131,7 +142,7 @@ export function scaffold({
         test(`[▣ i] ${testCase}    Endo can import`, async (t) => {
           t.plan(1);
 
-          await importLocation(read, pkg, {
+          await importLocation(readPowers, pkg, {
             globals,
             modules,
             moduleTransforms,
@@ -143,7 +154,7 @@ export function scaffold({
         } the exports Node.js got`, async (t) => {
           t.plan(1);
 
-          const { namespace } = await importLocation(read, pkg, {
+          const { namespace } = await importLocation(readPowers, pkg, {
             globals,
             modules,
             moduleTransforms,
@@ -167,7 +178,7 @@ export function scaffold({
         test(`[▣ d] ${testCase}    Endo imports default`, async (t) => {
           t.plan(1);
 
-          const { namespace } = await importLocation(read, pkg, {
+          const { namespace } = await importLocation(readPowers, pkg, {
             globals,
             modules,
             moduleTransforms,
