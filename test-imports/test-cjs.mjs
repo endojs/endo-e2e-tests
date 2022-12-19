@@ -12,5 +12,5 @@ const { testPackages } = scaffold({
 });
 testPackages({
   ext: 'cjs',
-  // only: 'keccak.cjs'
+  // only: 'uuid.cjs'
 });

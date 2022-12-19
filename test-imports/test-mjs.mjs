@@ -12,5 +12,5 @@ const { testPackages } = scaffold({
 });
 testPackages({
   ext: 'mjs',
-  // only: '_babel_types.mjs',
+  // only: 'which.mjs',
 });
