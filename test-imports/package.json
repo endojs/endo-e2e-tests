@@ -9,7 +9,6 @@
     "generate-cases": "node ./tools/generate-cases.cjs"
   },
   "dependencies": {
-    "@babel/types": "^7.17.0",
     "@ethersproject/random": "5.6.0",
     "@noble/hashes": "1.0.0",
     "acorn": "8.7.0",
@@ -43,7 +42,10 @@
     "yargs": "17.4.1"
   },
   "devDependencies": {
-    "@babel/types": "^7.17.0",
+    "@agoric/babel-generator": "^7.17.6",
+    "@babel/parser": "^7.20.5",
+    "@babel/traverse": "^7.20.5",
+    "@babel/types": "^7.20.5",
     "@endo/compartment-mapper": "^0.7.1",
     "ava": "^4.1.0",
     "ses": "^0.15.11"
