@@ -51,8 +51,7 @@
     "@babel/traverse": "^7.20.5",
     "@babel/types": "^7.20.5",
     "@endo/compartment-mapper": "^0.8.0",
-    "ava": "^4.1.0",
-    "ses": "latest"
+    "ava": "^4.1.0"
   },
   "private": true,
   "keywords": [],

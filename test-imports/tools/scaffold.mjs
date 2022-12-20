@@ -96,6 +96,7 @@ function awaitLogs() {
 const CASES = '../cases/';
 export function scaffold({
   importLocation,
+  makeBundle,
   modules = {},
   globals = {},
   strictMatchingExports = false,
@@ -151,7 +152,7 @@ export function scaffold({
         cases = cases.filter((c) => c.slice(-3) === ext);
       }
 
-      awaitingLogs.plan(cases.length * 5);
+      awaitingLogs.plan(cases.length * 6);
 
       cases.forEach((testCase) => {
         const pkg = localUrl(`${CASES}${testCase}`);
@@ -263,6 +264,18 @@ export function scaffold({
             namespace.actual.default,
             namespace.expected.default,
           );
+        });
+        testWrapper(`[▣ B] ${testCase}    Endo can bundle`, async (t) => {
+          // t.plan(2);
+
+          const bundle = await makeBundle(readPowers.read, pkg, {
+            tags: ['browser'],
+            moduleTransforms,
+          });
+          t.notThrows(() => {
+            eval(bundle);
+          }, 'Produced a bundle that throws.');
+          return t.pass();
         });
       });
 
