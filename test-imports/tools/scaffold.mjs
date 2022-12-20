@@ -114,7 +114,7 @@ export function scaffold({
           try {
             await impl(t);
           } catch (e) {
-            message = 'FAILED\n' + e.message;
+            message = 'FAILED ' + e.message;
             throw e;
           } finally {
             awaitingLogs.collect(name, message);
