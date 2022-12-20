@@ -1,0 +1,30 @@
+name: Repository Dispatch
+on:
+  repository_dispatch:
+    types: [e2e]
+  workflow_dispatch:
+    inputs:
+      ref:
+        description: 'Endo repository ref'     
+        required: true
+        default: 'refs/heads/master'
+jobs:
+  e2e:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout from endo ${{  github.event.client_payload.ref }}
+      - uses: actions/checkout@v3
+        with:
+          repository: endojs/endo
+          ref: ${{ github.event.client_payload.ref }}
+      - name: checkout self
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+      - run: cd test-imports 
+      - run: npm start
+      - run: echo 'install endo from checkout'
+      - run: npm test
