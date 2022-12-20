@@ -15,7 +15,7 @@ jobs:
     steps:
       - name: checkout self
         uses: actions/checkout@v3
-      - name: checkout from endo ${{  github.event.client_payload.ref }}
+      - name: checkout from endo ${{  github.event.client_payload.ref || github.inputs.ref }}
         uses: actions/checkout@v3
         with:
           repository: endojs/endo
