@@ -28,8 +28,8 @@ jobs:
           cache: 'npm'
       - name: prepare local copy of SES
         run: |
-          cd _ENDO_REPO_/packages/ses
-          yarn install
+          cd _ENDO_REPO_/
+          yarn
       - name: setup and run the tests
         run: |
           cd test-imports 
