@@ -1,5 +1,6 @@
 name: e2e tests on endo repo
 on:
+  push:
   workflow_dispatch:
     inputs:
       ref:
@@ -12,19 +13,28 @@ jobs:
   e2e:
     runs-on: ubuntu-latest
     steps:
+      - name: checkout self
+        uses: actions/checkout@v3
       - name: checkout from endo ${{  github.event.client_payload.ref }}
         uses: actions/checkout@v3
         with:
           repository: endojs/endo
           ref: ${{ github.event.client_payload.ref }}
-      - name: checkout self
-        uses: actions/checkout@v3
+          path: _ENDO_REPO_
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
-      - run: cd test-imports 
-      - run: npm start
-      - run: echo 'install endo from checkout goes here, but gotta figure out the paths' && ls
-      - run: npm test
+      - name: prepare local copy of SES
+        run: |
+          cd _ENDO_REPO_/packages/ses
+          yarn install
+      - name: setup and run the tests
+        run: |
+          cd test-imports 
+          npm start
+          npm i -D --ignore-scripts ../_ENDO_REPO_/packages/ses
+          npm i -D --ignore-scripts ../_ENDO_REPO_/packages/compartment-mapper
+          npm test
+          npm ls ses
