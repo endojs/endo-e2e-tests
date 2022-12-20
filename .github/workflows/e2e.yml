@@ -1,13 +1,13 @@
 name: e2e tests on endo repo
 on:
-  repository_dispatch:
-    types: [e2e]
   workflow_dispatch:
     inputs:
       ref:
         description: 'Endo repository ref'     
         required: true
         default: 'refs/heads/master'
+  repository_dispatch:
+    types: [e2e]
 jobs:
   e2e:
     runs-on: ubuntu-latest
