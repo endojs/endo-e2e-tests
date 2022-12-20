@@ -6,6 +6,7 @@
     "start": "npm ci --ignore-scripts && npm run generate-cases",
     "install-case": "npm i --ignore-scripts --save-exact",
     "test": "ava",
+    "snapshot": "ava --update-snapshots",
     "generate-cases": "node ./tools/generate-cases.cjs"
   },
   "dependencies": {
@@ -49,9 +50,9 @@
     "@babel/parser": "^7.20.5",
     "@babel/traverse": "^7.20.5",
     "@babel/types": "^7.20.5",
-    "@endo/compartment-mapper": "^0.7.7",
+    "@endo/compartment-mapper": "^0.8.0",
     "ava": "^4.1.0",
-    "ses": "^0.15.17"
+    "ses": "latest"
   },
   "private": true,
   "keywords": [],
