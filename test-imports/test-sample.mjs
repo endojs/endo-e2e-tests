@@ -12,6 +12,6 @@ const { testPackages } = scaffold({
   strictMatchingExports: false,
 });
 testPackages({
-  ext: 'mjs',
-  // only: 'which.mjs',
+  ext: 'cjs',
+  only: 'punycode.cjs',
 });

@@ -18,6 +18,8 @@ To execute tests, run:
 npm test
 ```
 
+Unless you've edited the test-\*.js files and enabled the `only` command, all individual tests are ignored (marked as failing) and a snapshot of test summary is the only enabled one. It allows you to focus on what changes to Endo impact ecosystem compatibility.
+
 ### Testing local instance
 
 To test your local Endo, open `index.mjs` and switch the imports to your local path.
@@ -26,7 +28,10 @@ Example
 
 ```js
 import '../../endo/packages/ses/index.js';
-import { importLocation } from '../../endo/packages/compartment-mapper/index.js';
+import {
+  importLocation,
+  makeBundle,
+} from '../../endo/packages/compartment-mapper/index.js';
 ```
 
 ## Cases
@@ -35,6 +40,12 @@ Dependencies in `test-imports/package.json` are tested by default.
 Each dependency has test cases generated for it checking if it works in cjs and in esm contexts.
 
 You can manually add test cases to `test-imports/cases` and all files there will run.
+
+### Snapshots
+
+`__snapshots__` folder contains a snapshot of all test results as they're unrealistic to turn 100% green. It's a proxy for detecting changes in ecosystem suport. Might evolve into something more advanced.
+
+For now, if snapshots test is failing, you manually verify if it's a regression or an improvement (or both)
 
 ### Adding cases
 
@@ -45,7 +56,7 @@ npm run install-case 'packagename'
 npm run generate-cases
 ```
 
-Existing files will not be overwritten. To regenerate all cases from dependencies run `npm mrun generate-cases overwrite`
+Existing files will not be overwritten. To regenerate all cases from dependencies run `npm run generate-cases overwrite`
 
 ### Test case format
 
@@ -56,6 +67,8 @@ A test case must export `expected` and `actual` - these two will be passed to Av
 
 REJECTED cases can be solved by adding a transform. I'm not listing all cases of rejections because there's just too many
 Scaffolding for these tests adds a transform to avoid the most common ones.
+
+> This section might be outdated compared to actual results as some of the issues might get fixed in Endo.
 
 ## typescript
 
