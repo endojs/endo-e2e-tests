@@ -33,8 +33,8 @@ jobs:
       - name: setup and run the tests
         run: |
           cd test-imports 
-          npm start
-          npm i -D --ignore-scripts ../_ENDO_REPO_/packages/ses
+          npm ci --ignore-scripts
           npm i -D --ignore-scripts ../_ENDO_REPO_/packages/compartment-mapper
+          npm i -D --ignore-scripts ../_ENDO_REPO_/packages/ses
           npm ls
           npm test

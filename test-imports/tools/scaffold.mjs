@@ -189,6 +189,7 @@ export function scaffold({
                 globals,
                 modules,
                 moduleTransforms,
+                dev: true,
               },
             );
             // note import.meta.resolve requires running node with --experimental-import-meta-resolve
@@ -204,6 +205,7 @@ export function scaffold({
             globals,
             modules,
             moduleTransforms,
+            dev: true,
           });
           return t.pass();
           // Snapshoting here could let us observe changes in support in mor detail.
@@ -221,6 +223,7 @@ export function scaffold({
               globals,
               modules,
               moduleTransforms,
+              dev: true,
             });
             if (
               !strictMatchingExports &&
@@ -250,6 +253,7 @@ export function scaffold({
             globals,
             modules,
             moduleTransforms,
+            dev: true,
           });
           if (!namespace.expected.default) {
             return t.is.skip();
@@ -271,6 +275,7 @@ export function scaffold({
           const bundle = await makeBundle(readPowers.read, pkg, {
             tags: ['browser'],
             moduleTransforms,
+            dev: true,
           });
           t.notThrows(() => {
             eval(bundle);
@@ -279,9 +284,11 @@ export function scaffold({
         });
       });
 
-      test('ALL', async (t) => {
-        t.snapshot(await awaitingLogs.done);
-      });
+      if (!only) {
+        test('ALL', async (t) => {
+          t.snapshot(await awaitingLogs.done);
+        });
+      }
     },
   };
 }
