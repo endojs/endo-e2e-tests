@@ -36,5 +36,5 @@ jobs:
           npm start
           npm i -D --ignore-scripts ../_ENDO_REPO_/packages/ses
           npm i -D --ignore-scripts ../_ENDO_REPO_/packages/compartment-mapper
+          npm ls
           npm test
-          npm ls ses
