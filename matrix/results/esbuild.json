@@ -2,7 +2,7 @@
   "name": "esbuild",
   "bin": "node",
   "args": [
-    "/home/naugtur/repo/endo-e2e-tests/matrix/cases/import-cjs/dist/esbuild.js"
+    "cases/import-cjs/dist/esbuild.js"
   ],
   "data": [
     {

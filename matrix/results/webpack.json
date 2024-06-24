@@ -2,7 +2,7 @@
   "name": "webpack",
   "bin": "node",
   "args": [
-    "/home/naugtur/repo/endo-e2e-tests/matrix/cases/import-cjs/dist/webpack.js"
+    "cases/import-cjs/dist/webpack.js"
   ],
   "data": [
     {

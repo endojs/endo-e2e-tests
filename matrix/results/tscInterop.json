@@ -2,7 +2,7 @@
   "name": "tscInterop",
   "bin": "node",
   "args": [
-    "/home/naugtur/repo/endo-e2e-tests/matrix/cases/import-cjs/dist/tscinterop/index.js"
+    "cases/import-cjs/dist/tscinterop/index.js"
   ],
   "data": [
     {
