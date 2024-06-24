@@ -23,6 +23,7 @@ npm run <name>
 - `run-endo` - Runs only endo tests - useful when switching endo versions
 - `generate` - Collects `./results/*` and generates the table.md file
 - `update-endo` - installs latest endo packages used in tests
+- bun is not included in `build` by default and has to be used with `npm run build:bun` after it's been installed on the machine.
 
 ## Bundler Configurations
 

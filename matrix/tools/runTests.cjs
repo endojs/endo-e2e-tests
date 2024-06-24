@@ -36,6 +36,11 @@ const engines = {
     bin: 'node',
     args: [`${CASE_PATH}/dist/tscinterop/index.js`],
   },
+  bun: {
+    name: 'bun',
+    bin: 'node',
+    args: [`${CASE_PATH}/dist/bun.mjs`],
+  },
 };
 
 function logErr({ name }, stderr) {

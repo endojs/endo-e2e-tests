@@ -17,6 +17,7 @@
     "build:esbuild": "esbuild cases/import-cjs/index.mjs  --bundle --outfile=cases/import-cjs/dist/esbuild.js",
     "build:webpack": "webpack --config cases/import-cjs/webpack.config.js",
     "build:rollup": "cd ./cases/import-cjs/ && rollup  --config rollup.config.js",
+    "build:bun": "bun build ./cases/import-cjs/index.mjs --outfile ./cases/import-cjs/dist/bun.mjs --target node",
     "build:parcel": "cd ./cases/import-cjs/ && parcel build --no-source-maps --no-cache"
   },
   "keywords": [],
