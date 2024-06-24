@@ -4,8 +4,8 @@ const { execFile } = require('child_process');
 const { writeFileSync } = require('fs');
 const path = require('path');
 
-const CASE_PATH = path.resolve(__dirname, '../cases/import-cjs');
-const RESULT_PATH = path.resolve(__dirname, '../results');
+const CASE_PATH = path.relative(process.cwd(), path.resolve(__dirname, '../cases/import-cjs'));
+const RESULT_PATH = path.relative(process.cwd(), path.resolve(__dirname, '../results'));
 
 const engines = {
   node: { name: 'node', bin: 'node', args: [`${CASE_PATH}/index.mjs`] },

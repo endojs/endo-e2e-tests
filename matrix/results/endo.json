@@ -2,7 +2,7 @@
   "name": "endo",
   "bin": "node",
   "args": [
-    "/home/naugtur/repo/endo-e2e-tests/matrix/cases/import-cjs/endo.mjs"
+    "cases/import-cjs/endo.mjs"
   ],
   "data": [
     {

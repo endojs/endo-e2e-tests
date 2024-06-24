@@ -2,7 +2,7 @@
   "name": "parcel",
   "bin": "node",
   "args": [
-    "/home/naugtur/repo/endo-e2e-tests/matrix/cases/import-cjs/dist/parcel.js"
+    "cases/import-cjs/dist/parcel.js"
   ],
   "data": [
     {
