@@ -137,12 +137,12 @@
         true
       ],
       "default": [
-        true,
-        true
+        false,
+        false
       ],
       "default.even": [
-        true,
-        true
+        false,
+        false
       ]
     },
     {
@@ -171,6 +171,20 @@
       "default.even": [
         false,
         false
+      ]
+    },
+    {
+      "even": [
+        true,
+        true
+      ],
+      "default": [
+        true,
+        true
+      ],
+      "default.even": [
+        true,
+        true
       ]
     }
   ]

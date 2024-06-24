@@ -172,6 +172,20 @@
         true,
         true
       ]
+    },
+    {
+      "even": [
+        false,
+        false
+      ],
+      "default": [
+        true,
+        true
+      ],
+      "default.even": [
+        true,
+        true
+      ]
     }
   ]
 }

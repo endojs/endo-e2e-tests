@@ -24,16 +24,18 @@
   "license": "Apache-2.0",
   "devDependencies": {
     "@rollup/plugin-commonjs": "^21.0.2",
+    "@types/eslint": "^8.56.10",
+    "@types/estree": "^1.0.5",
     "esbuild": "^0.14.25",
     "parcel": "^2.3.2",
     "process": "^0.11.10",
     "rollup": "^2.69.0",
-    "typescript": "^4.6.2",
+    "typescript": "^5.5.2",
     "webpack": "^5.69.1",
     "webpack-cli": "^4.9.2"
   },
   "dependencies": {
-    "@endo/compartment-mapper": "^0.7.1",
-    "ses": "^0.15.11"
+    "@endo/compartment-mapper": "^1.1.5",
+    "ses": "^1.5.0"
   }
 }
