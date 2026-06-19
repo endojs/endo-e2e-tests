@@ -1,6 +1,6 @@
 import test from 'ava';
 import fs from 'fs';
-import { transformSource } from './sanitizeTransform.mjs';
+import { evadeCensorSync } from '@endo/evasive-transform';
 import { getModules } from './core-modules.mjs';
 import url from 'url';
 
@@ -8,10 +8,30 @@ function localUrl(path) {
   return new URL(path, import.meta.url).toString();
 }
 
+/**
+ * @param {string} _
+ * @param {string} p1
+ * @returns {string}
+ */
+const DIRECT_EVAL_REPLACE_FN = (_, p1) => '(0,eval)' + p1;
+
+/**
+ * @param {string} source
+ * @returns {string}
+ */
+const evadeDirectEvalExpressions = (source) => {
+  return source.replace(/\beval(\s*\()/g, DIRECT_EVAL_REPLACE_FN);
+};
+
 const importsTransform = (sourceType, parser) => (sourceBytes) => {
   const source = new TextDecoder().decode(sourceBytes);
-  const object = transformSource(source, { sourceType });
-  const objectBytes = new TextEncoder().encode(object.code);
+  const object = evadeCensorSync(source, {
+    sourceType,
+    elideComments: true,
+  });
+  let newSource = object.code + '\n'; //elideComments will leave an empty trailing // where a sourcemap was and it messes up something in SES
+  newSource = evadeDirectEvalExpressions(newSource);
+  const objectBytes = new TextEncoder().encode(newSource);
 
   return { bytes: objectBytes, parser };
 };
@@ -62,11 +82,21 @@ const coreModuleNames = [
   'string_decoder',
 ];
 
+const read = async (location) =>
+  fs.promises.readFile(new URL(location).pathname);
+const readPowersDefault = {
+  read,
+  fileURLToPath: url.fileURLToPath, // required for __dirname support in endo
+  canonical: async (p) => p,
+};
+
 const CASES = '../cases/';
 export function scaffold({
   importLocation,
+  DEFAULTS = {},
   modules = {},
   globals = {},
+  readPowers = readPowersDefault,
   strictMatchingExports = false,
 }) {
   return {
@@ -79,15 +109,6 @@ export function scaffold({
         globalThis,
         globals,
       );
-
-      const read = async (location) =>
-        fs.promises.readFile(new URL(location).pathname);
-
-      const readPowers = {
-        read,
-        fileURLToPath: url.fileURLToPath, // required for __dirname support in endo
-        canonical: async (p) => p,
-      };
 
       let cases = fs.readdirSync(localUrl(CASES).replace('file://', ''));
       if (only) {
@@ -109,14 +130,18 @@ export function scaffold({
           return t.deepEqual(namespace.actual, namespace.expected);
         });
         test(`[⬢=▣] ${testCase}    import resolution matches`, async (t) => {
-          t.plan(1);
+          t.plan(3);
 
           let endoPath;
+          let called = false;
 
           const { namespace } = await importLocation(
             {
               ...readPowers,
+              maybeRead: undefined,
+              maybeReadNow: undefined,
               read: async (location) => {
+                called = true;
                 if (
                   !endoPath &&
                   location.slice(-12) !== 'package.json' &&
@@ -125,11 +150,24 @@ export function scaffold({
                   // capture first import location of a test case
                   endoPath = location;
                 }
-                return read(location);
+                return readPowers.read(location);
+              },
+              readNow: (location) => {
+                called = true;
+                if (
+                  !endoPath &&
+                  location.slice(-12) !== 'package.json' &&
+                  !location.includes('/test-imports/cases/')
+                ) {
+                  // capture first import location of a test case
+                  endoPath = location;
+                }
+                return readPowers.readNow(location);
               },
             },
             pkg,
             {
+              ...DEFAULTS,
               globals,
               modules,
               moduleTransforms,
@@ -137,12 +175,23 @@ export function scaffold({
           );
           // note import.meta.resolve requires running node with --experimental-import-meta-resolve
           const nodePath = await import.meta.resolve(namespace.name);
+          t.not(
+            endoPath,
+            undefined,
+            `--- ⚠️ Endo did not resolve the import path (called:${called}) ---`,
+          );
+          t.not(
+            nodePath,
+            undefined,
+            '--- ⚠️ Node.js did not resolve the import path ---',
+          );
           t.is(nodePath, endoPath);
         });
         test(`[▣ i] ${testCase}    Endo can import`, async (t) => {
           t.plan(1);
 
           await importLocation(readPowers, pkg, {
+            ...DEFAULTS,
             globals,
             modules,
             moduleTransforms,
@@ -155,6 +204,7 @@ export function scaffold({
           t.plan(1);
 
           const { namespace } = await importLocation(readPowers, pkg, {
+            ...DEFAULTS,
             globals,
             modules,
             moduleTransforms,
@@ -179,6 +229,7 @@ export function scaffold({
           t.plan(1);
 
           const { namespace } = await importLocation(readPowers, pkg, {
+            ...DEFAULTS,
             globals,
             modules,
             moduleTransforms,

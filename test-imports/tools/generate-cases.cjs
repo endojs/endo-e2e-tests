@@ -53,7 +53,7 @@ async function generateFiles(basepath, cases) {
       try {
         all = await getExport[type](name);
       } catch (e) {
-        // cannot require esm
+        // cannot require esm sometimes
         console.error(
           `--- ⚠️ Skipping ${file} because: ---\n`,
           e.message || e,
