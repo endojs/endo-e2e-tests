@@ -23,7 +23,7 @@ const { testPackages } = scaffold({
     url,
   }),
   DEFAULTS: {
-    //parserForLanguage: parserForLanguageWithCjsBabel
+    parserForLanguage: parserForLanguageWithCjsBabel
   },
   importLocation,
   strictMatchingExports: false,

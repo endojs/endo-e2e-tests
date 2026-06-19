@@ -1,0 +1,1173 @@
+
+> cases@1.0.0 test
+> ava
+
+
+  ✔ cjs › [⬢ _] _babel_types.cjs Node.js baseline (365ms)
+  ✔ cjs › [⬢ _] _ethersproject_random.cjs Node.js baseline (364ms)
+  ✔ cjs › [⬢ _] acorn.cjs Node.js baseline (364ms)
+  ✔ cjs › [⬢ _] axios.cjs Node.js baseline (364ms)
+  ✔ cjs › [⬢ _] bignumber.js.cjs Node.js baseline (364ms)
+  ✔ cjs › [⬢ _] browser-resolve.cjs Node.js baseline (364ms)
+  ✔ cjs › [⬢ _] browserify.cjs Node.js baseline (363ms)
+  ✔ cjs › [⬢ _] css-loader.cjs Node.js baseline (363ms)
+  ✔ cjs › [⬢ _] elliptic.cjs Node.js baseline (363ms)
+  ✔ cjs › [⬢ _] eslint.cjs Node.js baseline (363ms)
+  ✔ cjs › [⬢ _] ethereumjs-common.cjs Node.js baseline (363ms)
+  ✔ cjs › [⬢ _] ethereumjs-util.cjs Node.js baseline (363ms)
+  ✔ cjs › [⬢ _] ethers.cjs Node.js baseline (363ms)
+  ✔ cjs › [⬢ _] fast-glob.cjs Node.js baseline (363ms)
+  ✔ cjs › [⬢ _] is-array.cjs Node.js baseline (363ms)
+  ✔ cjs › [⬢ _] json-rpc-engine.cjs Node.js baseline (363ms)
+  ✔ cjs › [⬢ _] keccak.cjs Node.js baseline (363ms)
+  ✔ cjs › [⬢ _] lodash.cjs Node.js baseline (362ms)
+  ✔ cjs › [⬢ _] lowdb.cjs Node.js baseline (362ms)
+  ✔ cjs › [⬢ _] mime.cjs Node.js baseline (362ms)
+  ✔ cjs › [⬢ _] polycrc.cjs Node.js baseline (362ms)
+  ✔ cjs › [⬢ _] prop-types.cjs Node.js baseline (362ms)
+  ✔ cjs › [⬢ _] punycode.cjs Node.js baseline (362ms)
+  ✔ cjs › [⬢ _] rc.cjs Node.js baseline (362ms)
+  ✔ cjs › [⬢ _] redux.cjs Node.js baseline (362ms)
+  ✔ cjs › [⬢ _] sinon.cjs Node.js baseline (362ms)
+  ✔ cjs › [⬢ _] storage.cjs Node.js baseline (362ms)
+  ✔ cjs › [⬢ _] typescript.cjs Node.js baseline (361ms)
+  ✔ cjs › [⬢ _] uuid.cjs Node.js baseline (361ms)
+  ✔ cjs › [⬢ _] web3-eth.cjs Node.js baseline (361ms)
+  ✔ cjs › [⬢ _] yargs.cjs Node.js baseline (361ms)
+  ✔ mjs › [⬢ _] _babel_types.mjs Node.js baseline (362ms)
+  ✔ mjs › [⬢ _] _ethersproject_random.mjs Node.js baseline (359ms)
+  ✔ mjs › [⬢ _] acorn.mjs Node.js baseline (359ms)
+  ✔ mjs › [⬢ _] axios.mjs Node.js baseline (357ms)
+  ✔ mjs › [⬢ _] bignumber.js.mjs Node.js baseline (356ms)
+  ✔ mjs › [⬢ _] browser-resolve.mjs Node.js baseline (355ms)
+  ✔ mjs › [⬢ _] browserify.mjs Node.js baseline (355ms)
+  ✔ mjs › [⬢ _] css-loader.mjs Node.js baseline (354ms)
+  ✔ mjs › [⬢ _] elliptic.mjs Node.js baseline (354ms)
+  ✔ mjs › [⬢ _] eslint.mjs Node.js baseline (353ms)
+  ✔ mjs › [⬢ _] ethereumjs-common.mjs Node.js baseline (353ms)
+  ✔ mjs › [⬢ _] ethereumjs-util.mjs Node.js baseline (353ms)
+  ✔ mjs › [⬢ _] ethers.mjs Node.js baseline (352ms)
+  ✔ mjs › [⬢ _] fast-glob.mjs Node.js baseline (351ms)
+  ✔ mjs › [⬢ _] is-array.mjs Node.js baseline (351ms)
+  ✔ mjs › [⬢ _] json-rpc-engine.mjs Node.js baseline (351ms)
+  ✔ mjs › [⬢ _] keccak.mjs Node.js baseline (350ms)
+  ✔ mjs › [⬢ _] lodash.mjs Node.js baseline (350ms)
+  ✔ mjs › [⬢ _] mime.mjs Node.js baseline (344ms)
+  ✔ mjs › [⬢ _] polycrc.mjs Node.js baseline (344ms)
+  ✔ mjs › [⬢ _] prop-types.mjs Node.js baseline (344ms)
+  ✔ mjs › [⬢ _] punycode.mjs Node.js baseline (343ms)
+  ✔ mjs › [⬢ _] rc.mjs Node.js baseline (343ms)
+  ✔ mjs › [⬢ _] redux.mjs Node.js baseline (342ms)
+  ✔ mjs › [⬢ _] sinon.mjs Node.js baseline (342ms)
+  ✔ mjs › [⬢ _] storage.mjs Node.js baseline (336ms)
+  ✔ mjs › [⬢ _] typescript.mjs Node.js baseline (335ms)
+  ✔ mjs › [⬢ _] web3-eth.mjs Node.js baseline (244ms)
+  ✔ mjs › [⬢ _] uuid.mjs Node.js baseline (245ms)
+  ✔ mjs › [⬢ _] lowdb.mjs Node.js baseline (346ms)
+  ✔ mjs › [⬢ _] yargs.mjs Node.js baseline (240ms)
+  ✔ cjs › [⬢=▣] acorn.cjs import resolution matches (22.4s)
+  ✔ mjs › [⬢=▣] acorn.mjs import resolution matches (22.5s)
+  ✔ mjs › [▣ i] acorn.mjs Endo can import (22.9s)
+  ✔ cjs › [▣ i] acorn.cjs Endo can import (22.9s)
+  ✔ mjs › [▣ *] acorn.mjs Endo import * gets _at least_ the exports Node.js got (23.1s)
+  ✔ cjs › [▣ *] acorn.cjs Endo import * gets _at least_ the exports Node.js got (23.2s)
+  ✔ mjs › [▣ d] acorn.mjs Endo imports default (23.4s)
+  ✔ cjs › [▣ d] acorn.cjs Endo imports default (23.5s)
+  ✖ cjs › [⬢=▣] bignumber.js.cjs import resolution matches 
+  ✔ cjs › [▣ i] bignumber.js.cjs Endo can import (23.7s)
+  ✖ mjs › [⬢=▣] bignumber.js.mjs import resolution matches 
+  ✔ mjs › [▣ i] bignumber.js.mjs Endo can import (23.8s)
+  ✖ cjs › [▣ *] bignumber.js.cjs Endo import * gets _at least_ the exports Node.js got 
+  ✖ mjs › [▣ *] bignumber.js.mjs Endo import * gets _at least_ the exports Node.js got Missing named exports: module.exports
+  ✖ cjs › [▣ d] bignumber.js.cjs Endo imports default 
+  ✖ mjs › [▣ d] bignumber.js.mjs Endo imports default 
+  ✔ cjs › [⬢=▣] is-array.cjs import resolution matches (24.1s)
+  ✔ cjs › [▣ i] is-array.cjs Endo can import (24.1s)
+  ✔ cjs › [▣ *] is-array.cjs Endo import * gets _at least_ the exports Node.js got (24.1s)
+  ✔ cjs › [▣ d] is-array.cjs Endo imports default (24.1s)
+  ✔ mjs › [⬢=▣] is-array.mjs import resolution matches (24.1s)
+  ✔ mjs › [▣ i] is-array.mjs Endo can import (24.1s)
+  ✖ mjs › [▣ *] is-array.mjs Endo import * gets _at least_ the exports Node.js got Missing named exports: module.exports
+  ✔ mjs › [▣ d] is-array.mjs Endo imports default (24.1s)
+  ✔ cjs › [⬢=▣] lodash.cjs import resolution matches (24.2s)
+  ✔ mjs › [⬢=▣] lodash.mjs import resolution matches (24.3s)
+  ✔ cjs › [▣ i] lodash.cjs Endo can import (24.4s)
+  ✔ mjs › [▣ i] lodash.mjs Endo can import (24.4s)
+  ✔ cjs › [▣ *] lodash.cjs Endo import * gets _at least_ the exports Node.js got (24.5s)
+  ✖ mjs › [▣ *] lodash.mjs Endo import * gets _at least_ the exports Node.js got Missing named exports: module.exports
+  ✔ cjs › [▣ d] lodash.cjs Endo imports default (24.6s)
+  ✔ cjs › [⬢=▣] polycrc.cjs import resolution matches (24.7s)
+  ✔ cjs › [▣ i] polycrc.cjs Endo can import (24.7s)
+  ✔ cjs › [▣ *] polycrc.cjs Endo import * gets _at least_ the exports Node.js got (24.7s)
+  ✔ cjs › [▣ d] polycrc.cjs Endo imports default (24.7s)
+  ✖ cjs › [⬢=▣] punycode.cjs import resolution matches 
+  ✔ cjs › [▣ i] punycode.cjs Endo can import (24.7s)
+  ✔ cjs › [▣ *] punycode.cjs Endo import * gets _at least_ the exports Node.js got (24.7s)
+  ✔ cjs › [▣ d] punycode.cjs Endo imports default (24.7s)
+  ✔ mjs › [▣ d] lodash.mjs Endo imports default (24.7s)
+  ✔ mjs › [⬢=▣] polycrc.mjs import resolution matches (24.7s)
+  ✔ mjs › [▣ i] polycrc.mjs Endo can import (24.7s)
+  ✖ mjs › [▣ *] polycrc.mjs Endo import * gets _at least_ the exports Node.js got Missing named exports: module.exports
+  ✔ mjs › [▣ d] polycrc.mjs Endo imports default (24.8s)
+  ✖ mjs › [⬢=▣] punycode.mjs import resolution matches 
+  ✔ mjs › [▣ i] punycode.mjs Endo can import (24.8s)
+  ✖ mjs › [▣ *] punycode.mjs Endo import * gets _at least_ the exports Node.js got Missing named exports: ucs2,version
+  ✔ mjs › [▣ d] punycode.mjs Endo imports default (24.8s)
+  ✔ cjs › [⬢=▣] sinon.cjs import resolution matches (26.1s)
+  ✔ mjs › [⬢=▣] sinon.mjs import resolution matches (26.1s)
+  ✔ cjs › [▣ i] sinon.cjs Endo can import (27.4s)
+  ✔ mjs › [▣ i] sinon.mjs Endo can import (27.4s)
+  ✔ mjs › [▣ *] sinon.mjs Endo import * gets _at least_ the exports Node.js got (28.7s)
+  ✔ cjs › [▣ *] sinon.cjs Endo import * gets _at least_ the exports Node.js got (28.8s)
+  ✔ cjs › [▣ d] sinon.cjs Endo imports default (30s)
+  ✔ cjs › [⬢=▣] storage.cjs import resolution matches (30s)
+  ✔ cjs › [▣ i] storage.cjs Endo can import (30s)
+  ✔ cjs › [▣ *] storage.cjs Endo import * gets _at least_ the exports Node.js got (30s)
+  ✔ cjs › [▣ d] storage.cjs Endo imports default (30s)
+  ✔ mjs › [▣ d] sinon.mjs Endo imports default (30.4s)
+  ✔ mjs › [⬢=▣] storage.mjs import resolution matches (30.4s)
+  ✔ mjs › [▣ i] storage.mjs Endo can import (30.4s)
+  ✖ mjs › [▣ *] storage.mjs Endo import * gets _at least_ the exports Node.js got Missing named exports: module.exports
+  ✔ mjs › [▣ d] storage.mjs Endo imports default (30.4s)
+  ✔ cjs › [⬢=▣] typescript.cjs import resolution matches (34.5s)
+  ✔ mjs › [⬢=▣] typescript.mjs import resolution matches (34.6s)
+  ✔ mjs › [▣ i] typescript.mjs Endo can import (39.1s)
+  ✔ cjs › [▣ i] typescript.cjs Endo can import (39.5s)
+  ✖ mjs › [▣ *] typescript.mjs Endo import * gets _at least_ the exports Node.js got Missing named exports: module.exports
+  ✔ cjs › [▣ *] typescript.cjs Endo import * gets _at least_ the exports Node.js got (44.5s)
+  ✔ mjs › [▣ d] typescript.mjs Endo imports default (48s)
+  ✔ cjs › [▣ d] typescript.cjs Endo imports default (49.5s)
+  ✔ mjs › [⬢=▣] lowdb.mjs import resolution matches (51.2s)
+  ✔ mjs › [▣ i] lowdb.mjs Endo can import (51.2s)
+  ✔ mjs › [▣ *] lowdb.mjs Endo import * gets _at least_ the exports Node.js got (51.2s)
+  ✔ mjs › [▣ d] lowdb.mjs Endo imports default (51.2s)
+  ✔ mjs › [⬢=▣] mime.mjs import resolution matches (51.2s)
+  ✔ mjs › [▣ i] mime.mjs Endo can import (51.2s)
+  ✖ mjs › [▣ *] mime.mjs Endo import * gets _at least_ the exports Node.js got Missing named exports: module.exports
+  ✔ mjs › [▣ d] mime.mjs Endo imports default (51.3s)
+  ✖ mjs › [⬢=▣] redux.mjs import resolution matches Rejected promise returned by test
+  ✖ mjs › [▣ i] redux.mjs Endo can import Rejected promise returned by test
+  ✖ mjs › [▣ *] redux.mjs Endo import * gets _at least_ the exports Node.js got Rejected promise returned by test
+  ✖ mjs › [▣ d] redux.mjs Endo imports default Rejected promise returned by test
+  ✖ mjs › [⬢=▣] uuid.mjs import resolution matches 
+  ✔ mjs › [▣ i] uuid.mjs Endo can import (51.3s)
+  ✔ mjs › [▣ *] uuid.mjs Endo import * gets _at least_ the exports Node.js got (51.3s)
+  ✔ mjs › [▣ d] uuid.mjs Endo imports default (51.3s)
+  ✔ cjs › [⬢=▣] lowdb.cjs import resolution matches (52.1s)
+  ✔ cjs › [▣ i] lowdb.cjs Endo can import (52.1s)
+  ✔ cjs › [▣ *] lowdb.cjs Endo import * gets _at least_ the exports Node.js got (52.1s)
+  ✔ cjs › [▣ d] lowdb.cjs Endo imports default (52.1s)
+  ✔ cjs › [⬢=▣] mime.cjs import resolution matches (52.1s)
+  ✔ cjs › [▣ i] mime.cjs Endo can import (52.1s)
+  ✔ cjs › [▣ *] mime.cjs Endo import * gets _at least_ the exports Node.js got (52.1s)
+  ✔ cjs › [▣ d] mime.cjs Endo imports default (52.2s)
+  ✖ cjs › [⬢=▣] redux.cjs import resolution matches 
+  ✔ cjs › [▣ i] redux.cjs Endo can import (52.2s)
+  ✔ cjs › [▣ *] redux.cjs Endo import * gets _at least_ the exports Node.js got (52.2s)
+  ✔ cjs › [▣ d] redux.cjs Endo imports default (52.2s)
+  ✖ cjs › [⬢=▣] uuid.cjs import resolution matches 
+  ✔ cjs › [▣ i] uuid.cjs Endo can import (52.3s)
+  ✔ cjs › [▣ *] uuid.cjs Endo import * gets _at least_ the exports Node.js got (52.3s)
+  ✔ cjs › [▣ d] uuid.cjs Endo imports default (52.3s)
+  ✔ mjs › [⬢=▣] _babel_types.mjs import resolution matches (52.8s)
+  ✔ mjs › [▣ i] _babel_types.mjs Endo can import (52.8s)
+  ✖ mjs › [▣ *] _babel_types.mjs Endo import * gets _at least_ the exports Node.js got Missing named exports: module.exports
+  ✔ mjs › [▣ d] _babel_types.mjs Endo imports default (52.8s)
+  ✔ cjs › [⬢=▣] _babel_types.cjs import resolution matches (54.6s)
+  ✔ cjs › [▣ i] _babel_types.cjs Endo can import (54.6s)
+  ✔ cjs › [▣ *] _babel_types.cjs Endo import * gets _at least_ the exports Node.js got (54.6s)
+  ✔ cjs › [▣ d] _babel_types.cjs Endo imports default (54.6s)
+  ✔ mjs › [⬢=▣] rc.mjs import resolution matches (55.6s)
+  ✔ mjs › [▣ i] rc.mjs Endo can import (55.6s)
+  ✖ mjs › [▣ *] rc.mjs Endo import * gets _at least_ the exports Node.js got Missing named exports: module.exports
+  ✔ mjs › [▣ d] rc.mjs Endo imports default (55.6s)
+  ✔ cjs › [⬢=▣] rc.cjs import resolution matches (57.5s)
+  ✔ cjs › [▣ i] rc.cjs Endo can import (57.5s)
+  ✔ cjs › [▣ *] rc.cjs Endo import * gets _at least_ the exports Node.js got (57.5s)
+  ✔ cjs › [▣ d] rc.cjs Endo imports default (57.6s)
+  ✔ mjs › [⬢=▣] prop-types.mjs import resolution matches (58.4s)
+  ✔ mjs › [▣ i] prop-types.mjs Endo can import (58.4s)
+  ✖ mjs › [▣ *] prop-types.mjs Endo import * gets _at least_ the exports Node.js got Missing named exports: module.exports
+  ✔ mjs › [▣ d] prop-types.mjs Endo imports default (58.4s)
+  ✔ mjs › [⬢=▣] yargs.mjs import resolution matches (59.2s)
+  ✔ mjs › [▣ i] yargs.mjs Endo can import (59.2s)
+  ✔ mjs › [▣ *] yargs.mjs Endo import * gets _at least_ the exports Node.js got (59.2s)
+  ✔ mjs › [▣ d] yargs.mjs Endo imports default (59.2s)
+  ✖ mjs › [⬢=▣] _ethersproject_random.mjs import resolution matches Rejected promise returned by test
+  ✖ mjs › [▣ i] _ethersproject_random.mjs Endo can import Rejected promise returned by test
+  ✖ mjs › [▣ *] _ethersproject_random.mjs Endo import * gets _at least_ the exports Node.js got Rejected promise returned by test
+  ✖ mjs › [▣ d] _ethersproject_random.mjs Endo imports default Rejected promise returned by test
+  ✔ cjs › [⬢=▣] prop-types.cjs import resolution matches (1m 0.3s)
+  ✔ cjs › [▣ i] prop-types.cjs Endo can import (1m 0.3s)
+  ✔ cjs › [▣ *] prop-types.cjs Endo import * gets _at least_ the exports Node.js got (1m 0.3s)
+  ✔ cjs › [▣ d] prop-types.cjs Endo imports default (1m 0.3s)
+  ✔ cjs › [⬢=▣] yargs.cjs import resolution matches (1m 1.3s)
+  ✔ cjs › [▣ i] yargs.cjs Endo can import (1m 1.3s)
+  ✖ cjs › [▣ *] yargs.cjs Endo import * gets _at least_ the exports Node.js got 
+  ✖ cjs › [▣ d] yargs.cjs Endo imports default 
+  ✖ cjs › [⬢=▣] _ethersproject_random.cjs import resolution matches 
+  ✔ cjs › [▣ i] _ethersproject_random.cjs Endo can import (1m 1.4s)
+  ✔ cjs › [▣ *] _ethersproject_random.cjs Endo import * gets _at least_ the exports Node.js got (1m 1.4s)
+  ✔ cjs › [▣ d] _ethersproject_random.cjs Endo imports default (1m 1.4s)
+  ✔ mjs › [⬢=▣] ethereumjs-common.mjs import resolution matches (1m 3.9s)
+  ✔ mjs › [▣ i] ethereumjs-common.mjs Endo can import (1m 3.9s)
+  ✖ mjs › [▣ *] ethereumjs-common.mjs Endo import * gets _at least_ the exports Node.js got Missing named exports: module.exports
+  ✔ mjs › [▣ d] ethereumjs-common.mjs Endo imports default (1m 3.9s)
+  ✔ mjs › [⬢=▣] json-rpc-engine.mjs import resolution matches (1m 5.1s)
+  ✔ mjs › [▣ i] json-rpc-engine.mjs Endo can import (1m 5.2s)
+  ✖ mjs › [▣ *] json-rpc-engine.mjs Endo import * gets _at least_ the exports Node.js got Missing named exports: module.exports
+  ✔ mjs › [▣ d] json-rpc-engine.mjs Endo imports default (1m 5.2s)
+  ✔ cjs › [⬢=▣] ethereumjs-common.cjs import resolution matches (1m 5.2s)
+  ✔ cjs › [▣ i] ethereumjs-common.cjs Endo can import (1m 5.2s)
+  ✔ cjs › [▣ *] ethereumjs-common.cjs Endo import * gets _at least_ the exports Node.js got (1m 5.2s)
+  ✔ cjs › [▣ d] ethereumjs-common.cjs Endo imports default (1m 5.2s)
+  ✔ cjs › [⬢=▣] json-rpc-engine.cjs import resolution matches (1m 7.2s)
+  ✔ cjs › [▣ i] json-rpc-engine.cjs Endo can import (1m 7.2s)
+  ✔ cjs › [▣ *] json-rpc-engine.cjs Endo import * gets _at least_ the exports Node.js got (1m 7.2s)
+  ✔ cjs › [▣ d] json-rpc-engine.cjs Endo imports default (1m 7.2s)
+  ✔ mjs › [⬢=▣] elliptic.mjs import resolution matches (1m 10.8s)
+  ✔ mjs › [▣ i] elliptic.mjs Endo can import (1m 10.9s)
+  ✖ mjs › [▣ *] elliptic.mjs Endo import * gets _at least_ the exports Node.js got Missing named exports: module.exports
+  ✔ mjs › [▣ d] elliptic.mjs Endo imports default (1m 11.1s)
+  ✔ cjs › [⬢=▣] elliptic.cjs import resolution matches (1m 12.9s)
+  ✔ cjs › [▣ i] elliptic.cjs Endo can import (1m 13s)
+  ✔ cjs › [▣ *] elliptic.cjs Endo import * gets _at least_ the exports Node.js got (1m 13.1s)
+  ✔ cjs › [▣ d] elliptic.cjs Endo imports default (1m 13.2s)
+  ✔ mjs › [⬢=▣] browserify.mjs import resolution matches (1m 16.1s)
+  ✔ mjs › [▣ i] browserify.mjs Endo can import (1m 16.1s)
+  ✖ mjs › [▣ *] browserify.mjs Endo import * gets _at least_ the exports Node.js got Missing named exports: module.exports
+  ✔ mjs › [▣ d] browserify.mjs Endo imports default (1m 16.1s)
+  ✔ mjs › [⬢=▣] browser-resolve.mjs import resolution matches (1m 16.8s)
+  ✔ mjs › [▣ i] browser-resolve.mjs Endo can import (1m 16.8s)
+  ✖ mjs › [▣ *] browser-resolve.mjs Endo import * gets _at least_ the exports Node.js got Missing named exports: module.exports
+  ✔ mjs › [▣ d] browser-resolve.mjs Endo imports default (1m 16.8s)
+  ✖ mjs › [⬢=▣] ethers.mjs import resolution matches Rejected promise returned by test
+  ✖ mjs › [▣ i] ethers.mjs Endo can import Rejected promise returned by test
+  ✖ mjs › [▣ *] ethers.mjs Endo import * gets _at least_ the exports Node.js got Rejected promise returned by test
+  ✖ mjs › [▣ d] ethers.mjs Endo imports default Rejected promise returned by test
+  ✔ mjs › [⬢=▣] keccak.mjs import resolution matches (1m 18.1s)
+  ✔ mjs › [▣ i] keccak.mjs Endo can import (1m 18.1s)
+  ✖ mjs › [▣ *] keccak.mjs Endo import * gets _at least_ the exports Node.js got Missing named exports: module.exports
+  ✔ cjs › [⬢=▣] browserify.cjs import resolution matches (1m 18.2s)
+  ✔ mjs › [▣ d] keccak.mjs Endo imports default (1m 18.2s)
+  ✔ cjs › [▣ i] browserify.cjs Endo can import (1m 18.2s)
+  ✔ cjs › [▣ *] browserify.cjs Endo import * gets _at least_ the exports Node.js got (1m 18.3s)
+  ✔ cjs › [▣ d] browserify.cjs Endo imports default (1m 18.3s)
+  ✔ cjs › [⬢=▣] browser-resolve.cjs import resolution matches (1m 19s)
+  ✔ cjs › [▣ i] browser-resolve.cjs Endo can import (1m 19s)
+  ✔ cjs › [▣ *] browser-resolve.cjs Endo import * gets _at least_ the exports Node.js got (1m 19s)
+  ✔ cjs › [▣ d] browser-resolve.cjs Endo imports default (1m 19s)
+  ✖ cjs › [⬢=▣] ethers.cjs import resolution matches 
+  ✔ cjs › [▣ i] ethers.cjs Endo can import (1m 19.6s)
+  ✔ cjs › [▣ *] ethers.cjs Endo import * gets _at least_ the exports Node.js got (1m 19.7s)
+  ✔ cjs › [▣ d] ethers.cjs Endo imports default (1m 19.7s)
+  ✔ cjs › [⬢=▣] keccak.cjs import resolution matches (1m 19.8s)
+  ✔ cjs › [▣ i] keccak.cjs Endo can import (1m 19.9s)
+  ✔ cjs › [▣ *] keccak.cjs Endo import * gets _at least_ the exports Node.js got (1m 19.9s)
+  ✔ cjs › [▣ d] keccak.cjs Endo imports default (1m 20s)
+  ✔ mjs › [⬢=▣] css-loader.mjs import resolution matches (1m 20.4s)
+  ✔ mjs › [▣ i] css-loader.mjs Endo can import (1m 20.4s)
+  ✖ mjs › [▣ *] css-loader.mjs Endo import * gets _at least_ the exports Node.js got Missing named exports: module.exports
+  ✔ mjs › [▣ d] css-loader.mjs Endo imports default (1m 20.5s)
+  ✔ mjs › [⬢=▣] fast-glob.mjs import resolution matches (1m 22.5s)
+  ✔ mjs › [▣ i] fast-glob.mjs Endo can import (1m 22.5s)
+  ✖ mjs › [▣ *] fast-glob.mjs Endo import * gets _at least_ the exports Node.js got Missing named exports: module.exports
+  ✔ mjs › [▣ d] fast-glob.mjs Endo imports default (1m 22.5s)
+  ✔ mjs › [⬢=▣] axios.mjs import resolution matches (1m 22.7s)
+  ✔ mjs › [▣ i] axios.mjs Endo can import (1m 22.7s)
+  ✖ mjs › [▣ *] axios.mjs Endo import * gets _at least_ the exports Node.js got Missing named exports: module.exports
+  ✔ mjs › [▣ d] axios.mjs Endo imports default (1m 22.7s)
+  ✔ cjs › [⬢=▣] css-loader.cjs import resolution matches (1m 22.7s)
+  ✔ cjs › [▣ i] css-loader.cjs Endo can import (1m 22.7s)
+  ✔ cjs › [▣ *] css-loader.cjs Endo import * gets _at least_ the exports Node.js got (1m 22.8s)
+  ✔ cjs › [▣ d] css-loader.cjs Endo imports default (1m 22.8s)
+  ✔ mjs › [⬢=▣] ethereumjs-util.mjs import resolution matches (1m 23.3s)
+  ✔ mjs › [▣ i] ethereumjs-util.mjs Endo can import (1m 23.4s)
+  ✖ mjs › [▣ *] ethereumjs-util.mjs Endo import * gets _at least_ the exports Node.js got Missing named exports: module.exports
+  ✔ mjs › [▣ d] ethereumjs-util.mjs Endo imports default (1m 23.6s)
+  ✔ mjs › [⬢=▣] web3-eth.mjs import resolution matches (1m 23.7s)
+  ✔ mjs › [▣ i] web3-eth.mjs Endo can import (1m 23.9s)
+  ✔ cjs › [⬢=▣] fast-glob.cjs import resolution matches (1m 24.2s)
+  ✔ cjs › [▣ i] fast-glob.cjs Endo can import (1m 24.2s)
+  ✔ cjs › [▣ *] fast-glob.cjs Endo import * gets _at least_ the exports Node.js got (1m 24.2s)
+  ✔ cjs › [▣ d] fast-glob.cjs Endo imports default (1m 24.2s)
+  ✖ mjs › [▣ *] web3-eth.mjs Endo import * gets _at least_ the exports Node.js got Missing named exports: module.exports
+  ✔ cjs › [⬢=▣] axios.cjs import resolution matches (1m 24.3s)
+  ✔ cjs › [▣ i] axios.cjs Endo can import (1m 24.4s)
+  ✔ cjs › [▣ *] axios.cjs Endo import * gets _at least_ the exports Node.js got (1m 24.4s)
+  ✔ cjs › [▣ d] axios.cjs Endo imports default (1m 24.4s)
+  ✔ mjs › [▣ d] web3-eth.mjs Endo imports default (1m 24.3s)
+  ✔ mjs › [⬢=▣] eslint.mjs import resolution matches (1m 24.5s)
+  ✔ mjs › [▣ i] eslint.mjs Endo can import (1m 24.5s)
+  ✖ mjs › [▣ *] eslint.mjs Endo import * gets _at least_ the exports Node.js got Missing named exports: module.exports
+  ✔ mjs › [▣ d] eslint.mjs Endo imports default (1m 24.6s)
+  ✔ cjs › [⬢=▣] ethereumjs-util.cjs import resolution matches (1m 25.3s)
+  ✔ cjs › [▣ i] ethereumjs-util.cjs Endo can import (1m 25.4s)
+  ✔ cjs › [▣ *] ethereumjs-util.cjs Endo import * gets _at least_ the exports Node.js got (1m 25.5s)
+  ✔ cjs › [▣ d] ethereumjs-util.cjs Endo imports default (1m 25.6s)
+  ✔ cjs › [⬢=▣] web3-eth.cjs import resolution matches (1m 25.8s)
+  ✔ cjs › [▣ i] web3-eth.cjs Endo can import (1m 26s)
+  ✔ cjs › [▣ *] web3-eth.cjs Endo import * gets _at least_ the exports Node.js got (1m 26.2s)
+  ✔ cjs › [▣ d] web3-eth.cjs Endo imports default (1m 26.4s)
+  ✔ cjs › [⬢=▣] eslint.cjs import resolution matches (1m 26.5s)
+  ✔ cjs › [▣ i] eslint.cjs Endo can import (1m 26.5s)
+  ✔ cjs › [▣ *] eslint.cjs Endo import * gets _at least_ the exports Node.js got (1m 26.6s)
+  ✔ cjs › [▣ d] eslint.cjs Endo imports default (1m 26.6s)
+  ─
+
+  cjs › [⬢=▣] bignumber.js.cjs import resolution matches
+
+  Difference:
+
+  - 'file:///home/naugtur/repo/endo-e2e-tests/test-imports/node_modules/bignumber.js/bignumber.js'
+  + 'file:///home/naugtur/repo/endo-e2e-tests/test-imports/node_modules/bignumber.js/bignumber.mjs'
+
+  › file://tools/scaffold.mjs:188:13
+
+
+
+  mjs › [⬢=▣] bignumber.js.mjs import resolution matches
+
+  Difference:
+
+  - 'file:///home/naugtur/repo/endo-e2e-tests/test-imports/node_modules/bignumber.js/bignumber.js'
+  + 'file:///home/naugtur/repo/endo-e2e-tests/test-imports/node_modules/bignumber.js/bignumber.mjs'
+
+  › file://tools/scaffold.mjs:188:13
+
+
+
+  cjs › [▣ *] bignumber.js.cjs Endo import * gets _at least_ the exports Node.js got
+
+  Difference:
+
+    {
+      keys: [
+  -     'EUCLID',
+  +     'BigNumber',
+  -     'ROUND_CEIL',
+  +     'EUCLID',
+  -     'ROUND_DOWN',
+  +     'ROUND_CEIL',
+  -     'ROUND_FLOOR',
+  +     'ROUND_DOWN',
+  -     'ROUND_HALF_CEIL',
+  +     'ROUND_FLOOR',
+  -     'ROUND_HALF_DOWN',
+  +     'ROUND_HALF_CEIL',
+  -     'ROUND_HALF_EVEN',
+  +     'ROUND_HALF_DOWN',
+  -     'ROUND_HALF_FLOOR',
+  +     'ROUND_HALF_EVEN',
+  -     'ROUND_HALF_UP',
+  +     'ROUND_HALF_FLOOR',
+  -     'ROUND_UP',
+  +     'ROUND_HALF_UP',
+  -     'clone',
+  +     'ROUND_UP',
+  -     'config',
+  +     'clone',
+  -     'isBigNumber',
+  +     'config',
+  -     'max',
+  +     'default',
+  -     'maximum',
+  +     'isBigNumber',
+  -     'min',
+  +     'max',
+  -     'minimum',
+  +     'maximum',
+  -     'random',
+  +     'min',
+  -     'set',
+  +     'minimum',
+  -     'sum',
+  +     'random',
+  +     'set',
+  +     'sum',
+      ],
+      type: 'function',
+    }
+
+  › file://tools/scaffold.mjs:225:22
+
+
+
+  mjs › [▣ *] bignumber.js.mjs Endo import * gets _at least_ the exports Node.js got
+
+  Missing named exports: module.exports
+
+  Value is not truthy:
+
+  false
+
+  › file://tools/scaffold.mjs:220:22
+
+
+
+  cjs › [▣ d] bignumber.js.cjs Endo imports default
+
+  Difference:
+
+    {
+      keys: [
+  +     'BigNumber',
+  +     'EUCLID',
+  +     'ROUND_CEIL',
+  +     'ROUND_DOWN',
+  +     'ROUND_FLOOR',
+  +     'ROUND_HALF_CEIL',
+  +     'ROUND_HALF_DOWN',
+  +     'ROUND_HALF_EVEN',
+  +     'ROUND_HALF_FLOOR',
+  +     'ROUND_HALF_UP',
+  +     'ROUND_UP',
+  +     'clone',
+  +     'config',
+  +     'default',
+  +     'isBigNumber',
+  +     'max',
+  +     'maximum',
+  +     'min',
+  +     'minimum',
+  +     'random',
+  +     'set',
+  +     'sum',
+      ],
+  -   type: 'undefined',
+  +   type: 'function',
+    }
+
+  › file://tools/scaffold.mjs:246:20
+
+
+
+  mjs › [▣ d] bignumber.js.mjs Endo imports default
+
+  Difference:
+
+    {
+      keys: [
+  -     'EUCLID',
+  +     'BigNumber',
+  -     'ROUND_CEIL',
+  +     'EUCLID',
+  -     'ROUND_DOWN',
+  +     'ROUND_CEIL',
+  -     'ROUND_FLOOR',
+  +     'ROUND_DOWN',
+  -     'ROUND_HALF_CEIL',
+  +     'ROUND_FLOOR',
+  -     'ROUND_HALF_DOWN',
+  +     'ROUND_HALF_CEIL',
+  -     'ROUND_HALF_EVEN',
+  +     'ROUND_HALF_DOWN',
+  -     'ROUND_HALF_FLOOR',
+  +     'ROUND_HALF_EVEN',
+  -     'ROUND_HALF_UP',
+  +     'ROUND_HALF_FLOOR',
+  -     'ROUND_UP',
+  +     'ROUND_HALF_UP',
+  -     'clone',
+  +     'ROUND_UP',
+  -     'config',
+  +     'clone',
+  -     'isBigNumber',
+  +     'config',
+  -     'max',
+  +     'default',
+  -     'maximum',
+  +     'isBigNumber',
+  -     'min',
+  +     'max',
+  -     'minimum',
+  +     'maximum',
+  -     'random',
+  +     'min',
+  -     'set',
+  +     'minimum',
+  -     'sum',
+  +     'random',
+  +     'set',
+  +     'sum',
+      ],
+      type: 'function',
+    }
+
+  › file://tools/scaffold.mjs:246:20
+
+
+
+  mjs › [▣ *] is-array.mjs Endo import * gets _at least_ the exports Node.js got
+
+  Missing named exports: module.exports
+
+  Value is not truthy:
+
+  false
+
+  › file://tools/scaffold.mjs:220:22
+
+
+
+  mjs › [▣ *] lodash.mjs Endo import * gets _at least_ the exports Node.js got
+
+  Missing named exports: module.exports
+
+  Value is not truthy:
+
+  false
+
+  › file://tools/scaffold.mjs:220:22
+
+
+
+  cjs › [⬢=▣] punycode.cjs import resolution matches
+
+  Difference:
+
+  - 'node:punycode'
+  + 'file:///home/naugtur/repo/endo-e2e-tests/test-imports/node_modules/punycode/punycode.es6.js'
+
+  › file://tools/scaffold.mjs:188:13
+
+
+
+  mjs › [▣ *] polycrc.mjs Endo import * gets _at least_ the exports Node.js got
+
+  Missing named exports: module.exports
+
+  Value is not truthy:
+
+  false
+
+  › file://tools/scaffold.mjs:220:22
+
+
+
+  mjs › [⬢=▣] punycode.mjs import resolution matches
+
+  Difference:
+
+  - 'node:punycode'
+  + 'file:///home/naugtur/repo/endo-e2e-tests/test-imports/node_modules/punycode/punycode.es6.js'
+
+  › file://tools/scaffold.mjs:188:13
+
+
+
+  mjs › [▣ *] punycode.mjs Endo import * gets _at least_ the exports Node.js got
+
+  Missing named exports: ucs2,version
+
+  Value is not truthy:
+
+  false
+
+  › file://tools/scaffold.mjs:220:22
+
+
+
+  mjs › [▣ *] storage.mjs Endo import * gets _at least_ the exports Node.js got
+
+  Missing named exports: module.exports
+
+  Value is not truthy:
+
+  false
+
+  › file://tools/scaffold.mjs:220:22
+
+
+
+  mjs › [▣ *] typescript.mjs Endo import * gets _at least_ the exports Node.js got
+
+  Missing named exports: module.exports
+
+  Value is not truthy:
+
+  false
+
+  › file://tools/scaffold.mjs:220:22
+
+
+
+  mjs › [▣ *] mime.mjs Endo import * gets _at least_ the exports Node.js got
+
+  Missing named exports: module.exports
+
+  Value is not truthy:
+
+  false
+
+  › file://tools/scaffold.mjs:220:22
+
+
+
+  mjs › [⬢=▣] redux.mjs import resolution matches
+
+  Rejected promise returned by test. Reason:
+
+  SyntaxError {
+    message: 'The requested module \'redux\' does not provide an export named \'default\'',
+  }
+
+  › imports (file:///home/naugtur/repo/endo/packages/ses/src/module-instance.js:406:17)
+  › eval (file://cases/redux.mjs:1:138)
+  › eval (file://cases/redux.mjs:10:3)
+  › execute (file:///home/naugtur/repo/endo/packages/ses/src/module-instance.js:476:9)
+  › compartmentImportNow (file:///home/naugtur/repo/endo/packages/ses/src/compartment.js:138:3)
+  › file:///home/naugtur/repo/endo/packages/ses/src/compartment.js:191:27
+  › async file://tools/scaffold.mjs:138:33
+
+
+
+  mjs › [▣ i] redux.mjs Endo can import
+
+  Rejected promise returned by test. Reason:
+
+  SyntaxError {
+    message: 'The requested module \'redux\' does not provide an export named \'default\'',
+  }
+
+  › imports (file:///home/naugtur/repo/endo/packages/ses/src/module-instance.js:406:17)
+  › eval (file://cases/redux.mjs:1:138)
+  › eval (file://cases/redux.mjs:10:3)
+  › execute (file:///home/naugtur/repo/endo/packages/ses/src/module-instance.js:476:9)
+  › compartmentImportNow (file:///home/naugtur/repo/endo/packages/ses/src/compartment.js:138:3)
+  › file:///home/naugtur/repo/endo/packages/ses/src/compartment.js:191:27
+  › async file://tools/scaffold.mjs:193:11
+
+
+
+  mjs › [▣ *] redux.mjs Endo import * gets _at least_ the exports Node.js got
+
+  Rejected promise returned by test. Reason:
+
+  SyntaxError {
+    message: 'The requested module \'redux\' does not provide an export named \'default\'',
+  }
+
+  › imports (file:///home/naugtur/repo/endo/packages/ses/src/module-instance.js:406:17)
+  › eval (file://cases/redux.mjs:1:138)
+  › eval (file://cases/redux.mjs:10:3)
+  › execute (file:///home/naugtur/repo/endo/packages/ses/src/module-instance.js:476:9)
+  › compartmentImportNow (file:///home/naugtur/repo/endo/packages/ses/src/compartment.js:138:3)
+  › file:///home/naugtur/repo/endo/packages/ses/src/compartment.js:191:27
+  › async file://tools/scaffold.mjs:206:33
+
+
+
+  mjs › [▣ d] redux.mjs Endo imports default
+
+  Rejected promise returned by test. Reason:
+
+  SyntaxError {
+    message: 'The requested module \'redux\' does not provide an export named \'default\'',
+  }
+
+  › imports (file:///home/naugtur/repo/endo/packages/ses/src/module-instance.js:406:17)
+  › eval (file://cases/redux.mjs:1:138)
+  › eval (file://cases/redux.mjs:10:3)
+  › execute (file:///home/naugtur/repo/endo/packages/ses/src/module-instance.js:476:9)
+  › compartmentImportNow (file:///home/naugtur/repo/endo/packages/ses/src/compartment.js:138:3)
+  › file:///home/naugtur/repo/endo/packages/ses/src/compartment.js:191:27
+  › async file://tools/scaffold.mjs:231:33
+
+
+
+  mjs › [⬢=▣] uuid.mjs import resolution matches
+
+  Difference:
+
+  - 'file:///home/naugtur/repo/endo-e2e-tests/test-imports/node_modules/uuid/wrapper.mjs'
+  + 'file:///home/naugtur/repo/endo-e2e-tests/test-imports/node_modules/uuid/dist/esm-browser/index.js'
+
+  › file://tools/scaffold.mjs:188:13
+
+
+
+  cjs › [⬢=▣] redux.cjs import resolution matches
+
+  Difference:
+
+  - 'file:///home/naugtur/repo/endo-e2e-tests/test-imports/node_modules/redux/lib/redux.js'
+  + 'file:///home/naugtur/repo/endo-e2e-tests/test-imports/node_modules/redux/es/redux.js'
+
+  › file://tools/scaffold.mjs:188:13
+
+
+
+  cjs › [⬢=▣] uuid.cjs import resolution matches
+
+  Difference:
+
+  - 'file:///home/naugtur/repo/endo-e2e-tests/test-imports/node_modules/uuid/wrapper.mjs'
+  + 'file:///home/naugtur/repo/endo-e2e-tests/test-imports/node_modules/uuid/dist/esm-browser/index.js'
+
+  › file://tools/scaffold.mjs:188:13
+
+
+
+  mjs › [▣ *] _babel_types.mjs Endo import * gets _at least_ the exports Node.js got
+
+  Missing named exports: module.exports
+
+  Value is not truthy:
+
+  false
+
+  › file://tools/scaffold.mjs:220:22
+
+
+
+  mjs › [▣ *] rc.mjs Endo import * gets _at least_ the exports Node.js got
+
+  Missing named exports: module.exports
+
+  Value is not truthy:
+
+  false
+
+  › file://tools/scaffold.mjs:220:22
+
+
+
+  mjs › [▣ *] prop-types.mjs Endo import * gets _at least_ the exports Node.js got
+
+  Missing named exports: module.exports
+
+  Value is not truthy:
+
+  false
+
+  › file://tools/scaffold.mjs:220:22
+
+
+
+  mjs › [⬢=▣] _ethersproject_random.mjs import resolution matches
+
+  Rejected promise returned by test. Reason:
+
+  SyntaxError {
+    message: 'The requested module \'@ethersproject/random\' does not provide an export named \'default\'',
+  }
+
+  › imports (file:///home/naugtur/repo/endo/packages/ses/src/module-instance.js:406:17)
+  › eval (file://cases/_ethersproject_random.mjs:1:138)
+  › eval (file://cases/_ethersproject_random.mjs:10:3)
+  › execute (file:///home/naugtur/repo/endo/packages/ses/src/module-instance.js:476:9)
+  › compartmentImportNow (file:///home/naugtur/repo/endo/packages/ses/src/compartment.js:138:3)
+  › file:///home/naugtur/repo/endo/packages/ses/src/compartment.js:191:27
+  › async file://tools/scaffold.mjs:138:33
+
+
+
+  mjs › [▣ i] _ethersproject_random.mjs Endo can import
+
+  Rejected promise returned by test. Reason:
+
+  SyntaxError {
+    message: 'The requested module \'@ethersproject/random\' does not provide an export named \'default\'',
+  }
+
+  › imports (file:///home/naugtur/repo/endo/packages/ses/src/module-instance.js:406:17)
+  › eval (file://cases/_ethersproject_random.mjs:1:138)
+  › eval (file://cases/_ethersproject_random.mjs:10:3)
+  › execute (file:///home/naugtur/repo/endo/packages/ses/src/module-instance.js:476:9)
+  › compartmentImportNow (file:///home/naugtur/repo/endo/packages/ses/src/compartment.js:138:3)
+  › file:///home/naugtur/repo/endo/packages/ses/src/compartment.js:191:27
+  › async file://tools/scaffold.mjs:193:11
+
+
+
+  mjs › [▣ *] _ethersproject_random.mjs Endo import * gets _at least_ the exports Node.js got
+
+  Rejected promise returned by test. Reason:
+
+  SyntaxError {
+    message: 'The requested module \'@ethersproject/random\' does not provide an export named \'default\'',
+  }
+
+  › imports (file:///home/naugtur/repo/endo/packages/ses/src/module-instance.js:406:17)
+  › eval (file://cases/_ethersproject_random.mjs:1:138)
+  › eval (file://cases/_ethersproject_random.mjs:10:3)
+  › execute (file:///home/naugtur/repo/endo/packages/ses/src/module-instance.js:476:9)
+  › compartmentImportNow (file:///home/naugtur/repo/endo/packages/ses/src/compartment.js:138:3)
+  › file:///home/naugtur/repo/endo/packages/ses/src/compartment.js:191:27
+  › async file://tools/scaffold.mjs:206:33
+
+
+
+  mjs › [▣ d] _ethersproject_random.mjs Endo imports default
+
+  Rejected promise returned by test. Reason:
+
+  SyntaxError {
+    message: 'The requested module \'@ethersproject/random\' does not provide an export named \'default\'',
+  }
+
+  › imports (file:///home/naugtur/repo/endo/packages/ses/src/module-instance.js:406:17)
+  › eval (file://cases/_ethersproject_random.mjs:1:138)
+  › eval (file://cases/_ethersproject_random.mjs:10:3)
+  › execute (file:///home/naugtur/repo/endo/packages/ses/src/module-instance.js:476:9)
+  › compartmentImportNow (file:///home/naugtur/repo/endo/packages/ses/src/compartment.js:138:3)
+  › file:///home/naugtur/repo/endo/packages/ses/src/compartment.js:191:27
+  › async file://tools/scaffold.mjs:231:33
+
+
+
+  cjs › [▣ *] yargs.cjs Endo import * gets _at least_ the exports Node.js got
+
+  Difference:
+
+    {
+      keys: [
+  +     '$0',
+  +     'addHelpOpt',
+  +     'addShowHiddenOpt',
+  +     'alias',
+  +     'argv',
+  +     'array',
+  +     'boolean',
+  +     'check',
+  +     'choices',
+  +     'coerce',
+  +     'command',
+  +     'commandDir',
+  +     'commands',
+  +     'completion',
+  +     'config',
+  +     'conflicts',
+  +     'constructor',
+  +     'count',
+  +     'default',
+  +     'defaults',
+  +     'demand',
+  +     'demandCommand',
+  +     'demandOption',
+  +     'deprecateOption',
+  +     'describe',
+  +     'detectLocale',
+  +     'env',
+  +     'epilog',
+  +     'epilogue',
+  +     'example',
+  +     'exit',
+  +     'exitProcess',
+  +     'fail',
+  +     'getAliases',
+  +     'getCompletion',
+  +     'getDemandedCommands',
+  +     'getDemandedOptions',
+  +     'getDeprecatedOptions',
+  +     'getDetectLocale',
+  +     'getExitProcess',
+  +     'getGroups',
+  +     'getHelp',
+  +     'getInternalMethods',
+  +     'getOptions',
+  +     'getStrict',
+  +     'getStrictCommands',
+  +     'getStrictOptions',
+  +     'global',
+  +     'group',
+  +     'help',
+  +     'hide',
+  +     'implies',
+  +     'locale',
+  +     'middleware',
+  +     'nargs',
+  +     'normalize',
+  +     'number',
+  +     'option',
+  +     'options',
+  +     'parse',
+  +     'parseAsync',
+  +     'parseSync',
+  +     'parsed',
+  +     'parserConfiguration',
+  +     'pkgConf',
+  +     'positional',
+  +     'recommendCommands',
+  +     'require',
+  +     'required',
+  +     'requiresArg',
+  +     'scriptName',
+  +     'showCompletionScript',
+  +     'showHelp',
+  +     'showHelpOnFail',
+  +     'showHidden',
+  +     'showVersion',
+  +     'skipValidation',
+  +     'strict',
+  +     'strictCommands',
+  +     'strictOptions',
+  +     'string',
+  +     'terminalWidth',
+  +     'updateLocale',
+  +     'updateStrings',
+  +     'usage',
+  +     'version',
+  +     'wrap',
+      ],
+      type: 'function',
+    }
+
+  › file://tools/scaffold.mjs:225:22
+
+
+
+  cjs › [▣ d] yargs.cjs Endo imports default
+
+  Difference:
+
+    {
+      keys: [],
+  -   type: 'undefined',
+  +   type: 'function',
+    }
+
+  › file://tools/scaffold.mjs:246:20
+
+
+
+  cjs › [⬢=▣] _ethersproject_random.cjs import resolution matches
+
+  Difference:
+
+  - 'file:///home/naugtur/repo/endo-e2e-tests/test-imports/node_modules/@ethersproject/random/lib/index.js'
+  + 'file:///home/naugtur/repo/endo-e2e-tests/test-imports/node_modules/@ethersproject/random/lib.esm/index.js'
+
+  › file://tools/scaffold.mjs:188:13
+
+
+
+  mjs › [▣ *] ethereumjs-common.mjs Endo import * gets _at least_ the exports Node.js got
+
+  Missing named exports: module.exports
+
+  Value is not truthy:
+
+  false
+
+  › file://tools/scaffold.mjs:220:22
+
+
+
+  mjs › [▣ *] json-rpc-engine.mjs Endo import * gets _at least_ the exports Node.js got
+
+  Missing named exports: module.exports
+
+  Value is not truthy:
+
+  false
+
+  › file://tools/scaffold.mjs:220:22
+
+
+
+  mjs › [▣ *] elliptic.mjs Endo import * gets _at least_ the exports Node.js got
+
+  Missing named exports: module.exports
+
+  Value is not truthy:
+
+  false
+
+  › file://tools/scaffold.mjs:220:22
+
+
+
+  mjs › [▣ *] browserify.mjs Endo import * gets _at least_ the exports Node.js got
+
+  Missing named exports: module.exports
+
+  Value is not truthy:
+
+  false
+
+  › file://tools/scaffold.mjs:220:22
+
+
+
+  mjs › [▣ *] browser-resolve.mjs Endo import * gets _at least_ the exports Node.js got
+
+  Missing named exports: module.exports
+
+  Value is not truthy:
+
+  false
+
+  › file://tools/scaffold.mjs:220:22
+
+
+
+  mjs › [⬢=▣] ethers.mjs import resolution matches
+
+  Rejected promise returned by test. Reason:
+
+  SyntaxError {
+    message: 'The requested module \'ethers\' does not provide an export named \'default\'',
+  }
+
+  › imports (file:///home/naugtur/repo/endo/packages/ses/src/module-instance.js:406:17)
+  › eval (file://cases/ethers.mjs:1:138)
+  › eval (file://cases/ethers.mjs:10:3)
+  › execute (file:///home/naugtur/repo/endo/packages/ses/src/module-instance.js:476:9)
+  › compartmentImportNow (file:///home/naugtur/repo/endo/packages/ses/src/compartment.js:138:3)
+  › file:///home/naugtur/repo/endo/packages/ses/src/compartment.js:191:27
+  › async file://tools/scaffold.mjs:138:33
+
+
+
+  mjs › [▣ i] ethers.mjs Endo can import
+
+  Rejected promise returned by test. Reason:
+
+  SyntaxError {
+    message: 'The requested module \'ethers\' does not provide an export named \'default\'',
+  }
+
+  › imports (file:///home/naugtur/repo/endo/packages/ses/src/module-instance.js:406:17)
+  › eval (file://cases/ethers.mjs:1:138)
+  › eval (file://cases/ethers.mjs:10:3)
+  › execute (file:///home/naugtur/repo/endo/packages/ses/src/module-instance.js:476:9)
+  › compartmentImportNow (file:///home/naugtur/repo/endo/packages/ses/src/compartment.js:138:3)
+  › file:///home/naugtur/repo/endo/packages/ses/src/compartment.js:191:27
+  › async file://tools/scaffold.mjs:193:11
+
+
+
+  mjs › [▣ *] ethers.mjs Endo import * gets _at least_ the exports Node.js got
+
+  Rejected promise returned by test. Reason:
+
+  SyntaxError {
+    message: 'The requested module \'ethers\' does not provide an export named \'default\'',
+  }
+
+  › imports (file:///home/naugtur/repo/endo/packages/ses/src/module-instance.js:406:17)
+  › eval (file://cases/ethers.mjs:1:138)
+  › eval (file://cases/ethers.mjs:10:3)
+  › execute (file:///home/naugtur/repo/endo/packages/ses/src/module-instance.js:476:9)
+  › compartmentImportNow (file:///home/naugtur/repo/endo/packages/ses/src/compartment.js:138:3)
+  › file:///home/naugtur/repo/endo/packages/ses/src/compartment.js:191:27
+  › async file://tools/scaffold.mjs:206:33
+
+
+
+  mjs › [▣ d] ethers.mjs Endo imports default
+
+  Rejected promise returned by test. Reason:
+
+  SyntaxError {
+    message: 'The requested module \'ethers\' does not provide an export named \'default\'',
+  }
+
+  › imports (file:///home/naugtur/repo/endo/packages/ses/src/module-instance.js:406:17)
+  › eval (file://cases/ethers.mjs:1:138)
+  › eval (file://cases/ethers.mjs:10:3)
+  › execute (file:///home/naugtur/repo/endo/packages/ses/src/module-instance.js:476:9)
+  › compartmentImportNow (file:///home/naugtur/repo/endo/packages/ses/src/compartment.js:138:3)
+  › file:///home/naugtur/repo/endo/packages/ses/src/compartment.js:191:27
+  › async file://tools/scaffold.mjs:231:33
+
+
+
+  mjs › [▣ *] keccak.mjs Endo import * gets _at least_ the exports Node.js got
+
+  Missing named exports: module.exports
+
+  Value is not truthy:
+
+  false
+
+  › file://tools/scaffold.mjs:220:22
+
+
+
+  cjs › [⬢=▣] ethers.cjs import resolution matches
+
+  Difference:
+
+  - 'file:///home/naugtur/repo/endo-e2e-tests/test-imports/node_modules/ethers/lib/index.js'
+  + 'file:///home/naugtur/repo/endo-e2e-tests/test-imports/node_modules/ethers/lib.esm/index.js'
+
+  › file://tools/scaffold.mjs:188:13
+
+
+
+  mjs › [▣ *] css-loader.mjs Endo import * gets _at least_ the exports Node.js got
+
+  Missing named exports: module.exports
+
+  Value is not truthy:
+
+  false
+
+  › file://tools/scaffold.mjs:220:22
+
+
+
+  mjs › [▣ *] fast-glob.mjs Endo import * gets _at least_ the exports Node.js got
+
+  Missing named exports: module.exports
+
+  Value is not truthy:
+
+  false
+
+  › file://tools/scaffold.mjs:220:22
+
+
+
+  mjs › [▣ *] axios.mjs Endo import * gets _at least_ the exports Node.js got
+
+  Missing named exports: module.exports
+
+  Value is not truthy:
+
+  false
+
+  › file://tools/scaffold.mjs:220:22
+
+
+
+  mjs › [▣ *] ethereumjs-util.mjs Endo import * gets _at least_ the exports Node.js got
+
+  Missing named exports: module.exports
+
+  Value is not truthy:
+
+  false
+
+  › file://tools/scaffold.mjs:220:22
+
+
+
+  mjs › [▣ *] web3-eth.mjs Endo import * gets _at least_ the exports Node.js got
+
+  Missing named exports: module.exports
+
+  Value is not truthy:
+
+  false
+
+  › file://tools/scaffold.mjs:220:22
+
+
+
+  mjs › [▣ *] eslint.mjs Endo import * gets _at least_ the exports Node.js got
+
+  Missing named exports: module.exports
+
+  Value is not truthy:
+
+  false
+
+  › file://tools/scaffold.mjs:220:22
+
+  ─
+
+  49 tests failed
